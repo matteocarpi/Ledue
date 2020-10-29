@@ -5,6 +5,10 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: document
+  path: content/impostazioni_contatti.md
+  label: Impostazioni e Contatti
+  match: "**/*"
+- type: document
   path: content/pages/home.md
   label: Home
 - type: document
