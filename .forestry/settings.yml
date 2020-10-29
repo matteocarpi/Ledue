@@ -7,6 +7,15 @@ sections:
 - type: document
   path: content/pages/home.md
   label: Home
+- type: document
+  path: content/pages/news.md
+  label: News
+  match: "**/*"
+- type: directory
+  path: content/collections
+  label: Collections
+  create: documents
+  match: "**/*"
 - type: directory
   path: content/posts
   label: Posts
