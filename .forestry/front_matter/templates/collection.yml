@@ -1,4 +1,25 @@
 ---
 label: Collection
 hide_body: true
-fields: []
+fields:
+- name: titolo
+  type: text
+  config:
+    required: false
+  label: Titolo
+  description: Nome della collezione
+- name: sottotitolo
+  type: text
+  config:
+    required: false
+  label: Sottotitolo
+  description: Due righe di descrizione della collezione
+- name: link_allo_shop
+  type: text
+  config:
+    required: false
+  label: Link allo shop
+- name: galleria
+  type: image_gallery
+  config: {}
+  label: Galleria
