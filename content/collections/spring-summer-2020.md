@@ -9,11 +9,11 @@ sottotitolo: 'Duis autem vel eum iriure dolor in hendrerit in vulputate velit es
   ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. '
 link_allo_shop: "#"
 galleria:
-- "/uploads/odp-officina-del-poggio-ss20-21.jpg"
-- "/uploads/odp-officina-del-poggio-ss20-toscanoclutch-plexyfuxia.jpg"
-- "/uploads/odp-officina-del-poggio-ss20-bag.jpg"
-- "/uploads/odp-officina-del-poggio-ss20-bag-leather-visor.jpg"
-- "/uploads/odp-officina-del-poggio-ss20-sling-black.jpg"
-- "/uploads/odp-officina-del-poggio-ss20-biciclutch.jpg"
+- "/content/images/odp-officina-del-poggio-ss20-21.jpg"
+- "/content/images/odp-officina-del-poggio-ss20-toscanoclutch-plexyfuxia.jpg"
+- "/content/images/odp-officina-del-poggio-ss20-bag.jpg"
+- "/content/images/odp-officina-del-poggio-ss20-bag-leather-visor.jpg"
+- "/content/images/odp-officina-del-poggio-ss20-sling-black.jpg"
+- "/content/images/odp-officina-del-poggio-ss20-biciclutch.jpg"
 
 ---

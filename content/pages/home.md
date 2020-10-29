@@ -1,9 +1,9 @@
 ---
 title: Home
 sliderr:
-- foto: "/uploads/odp-officina-del-poggio-ss20-biciclutch.jpg"
+- foto: "/content/images/odp-officina-del-poggio-ss20-biciclutch.jpg"
   colore_del_logo: Bianco
-- foto: "/uploads/cvbnm.jpg"
+- foto: "/content/images/cvbnm.jpg"
   colore_del_logo: Nero
 welcome_text: 'At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum
   dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
@@ -16,6 +16,6 @@ about_us:
     accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue
     duis dolore te feugait nulla facilisi. Stet clita kasd gubergren, no sea takimata
     sanctus est Lorem ipsum dolor sit amet. '
-  foto: "/uploads/about-foto.png"
+  foto: "/content/images/about-foto.png"
 
 ---
