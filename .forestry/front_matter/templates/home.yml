@@ -9,5 +9,11 @@ fields:
   label: Title
   default: Home
   hidden: false
+- name: slider
+  type: include
+  config: {}
+  template: post
+  label: Slider
+  description: Le foto che scorreranno all'apertura della home
 pages:
 - content/pages/home.md

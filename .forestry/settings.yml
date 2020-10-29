@@ -10,7 +10,6 @@ sections:
 - type: document
   path: content/pages/news.md
   label: News
-  match: "**/*"
 - type: directory
   path: content/collections
   label: Collections
