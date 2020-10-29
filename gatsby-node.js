@@ -41,3 +41,31 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
 };
+
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions;
+  const result = await graphql(`
+    query {
+      allFile(filter: {relativeDirectory: {eq: "collections"}}) {
+        edges {
+          node {
+            childMarkdownRemark {
+              fields {
+                slug
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+  result.data.allFile.edges.forEach(({ node }) => {
+    createPage({
+      path: node.childMarkdownRemark.fields.slug,
+      component: path.resolve('./src/templates/collection.js'),
+      context: {
+        slug: node.childMarkdownRemark.fields.slug,
+      },
+    });
+  });
+};
