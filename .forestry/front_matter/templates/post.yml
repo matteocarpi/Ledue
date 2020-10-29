@@ -8,4 +8,5 @@ fields:
     required: true
   label: Title
 pages:
+- content/posts/ciao.md
 - content/posts/first-post.md
