@@ -1,4 +1,10 @@
 ---
 label: News
-hide_body: false
-fields: []
+hide_body: true
+fields:
+- name: foto
+  type: file
+  config:
+    maxSize: 64
+  label: Foto
+  description: La foto grande che apparirà in cima alla pagina News
