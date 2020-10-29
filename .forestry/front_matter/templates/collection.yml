@@ -1,12 +1,12 @@
 ---
 label: Collection
-hide_body: false
+hide_body: true
 fields:
-- name: titolo
+- name: title
   type: text
   config:
     required: false
-  label: Titolo
+  label: Title
   description: Nome della collezione
 - name: sottotitolo
   type: text
@@ -24,4 +24,5 @@ fields:
   config: {}
   label: Galleria
 pages:
+- content/collections/fsdfsd.md
 - content/collections/spring-summer.md
