@@ -23,6 +23,3 @@ fields:
   type: image_gallery
   config: {}
   label: Galleria
-pages:
-- content/collections/fsdfsd.md
-- content/collections/spring-summer.md
