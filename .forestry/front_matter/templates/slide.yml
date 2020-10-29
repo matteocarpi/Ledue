@@ -1,4 +1,24 @@
 ---
 label: Slide
 hide_body: true
-fields: []
+fields:
+- name: foto
+  type: file
+  config:
+    maxSize: 64
+  label: Foto
+- name: colore_del_logo
+  type: select
+  default: Nero
+  config:
+    required: false
+    options:
+    - Nero
+    - Bianco
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Colore del Logo
+  description: Logo bianco o logo nero?
