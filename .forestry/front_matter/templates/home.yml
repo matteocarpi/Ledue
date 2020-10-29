@@ -18,7 +18,7 @@ fields:
     template: slide
     label: Slide
   config:
-    min: 
+    min: 1
     max: 
     labelField: 
   label: Slider
