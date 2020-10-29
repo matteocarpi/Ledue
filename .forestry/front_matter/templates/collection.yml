@@ -24,4 +24,5 @@ fields:
   config: {}
   label: Galleria
 pages:
+- content/collections/invero.md
 - content/collections/spring-summer-2020.md
