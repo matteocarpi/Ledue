@@ -1,8 +1,8 @@
 // eslint-disable-next-line no-undef
 module.exports = {
   siteMetadata: {
-    title: 'Tameto Gatsby Forestry',
-    description: 'A more than minimal Gatsby starter',
+    title: 'LEDUE',
+    description: 'Artisanal Handbags',
     author: '@matteocarpi',
   },
   plugins: [
@@ -71,13 +71,13 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'tameto-gatsby',
-        short_name: 'tameto',
+        name: 'ledue',
+        short_name: 'ledue',
         start_url: '/',
-        background_color: '#F6D98E',
-        theme_color: '#3B4566',
+        background_color: '#FFFFFF',
+        theme_color: '#4A3030',
         display: 'minimal-ui',
-        icon: 'src/images/tameto-icon.png', // This path is relative to the root of the site.
+        icon: 'src/images/favicon.png', // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
