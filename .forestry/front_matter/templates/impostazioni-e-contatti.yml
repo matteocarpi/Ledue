@@ -1,4 +1,54 @@
 ---
 label: Impostazioni e Contatti
 hide_body: true
-fields: []
+fields:
+- name: logo_bianco
+  type: file
+  config:
+    maxSize: 64
+  label: Logo Bianco
+- name: logo_nero
+  type: file
+  config:
+    maxSize: 64
+  label: Logo Nero
+- name: indirizzi_mail
+  type: field_group_list
+  fields:
+  - name: indirizzo
+    type: text
+    config:
+      required: false
+    label: Indirizzo
+  config:
+    min: 1
+    max: 
+    labelField: indirizzo
+  label: Indirizzi Mail
+- name: numeri_di_telefono
+  type: field_group_list
+  fields:
+  - name: numero
+    type: text
+    config:
+      required: false
+    label: Numero
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Numeri di Telefono
+- name: instagram
+  type: text
+  config:
+    required: false
+  label: Instagram
+  description: 'Inserisci il link completo (esempio: <a href="https://www.instagram.com/ledue_handbags/"
+    title="https://www.instagram.com/ledue_handbags/" target="_blank">https://www.instagram.com/ledue_handbags/</a>)'
+- name: facebook
+  type: text
+  config:
+    required: false
+  label: Facebook
+  description: 'Inserisci il link completo (esempio: <a href="https://www.facebook.com/L%C4%92DUE-106346091148913"
+    title="https://www.facebook.com/L%C4%92DUE-106346091148913" target="_blank">https://www.facebook.com/L%C4%92DUE-106346091148913</a>)'
