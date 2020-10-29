@@ -8,12 +8,6 @@ fields:
     required: false
   label: Title
   description: Nome della collezione
-- name: sottotitolo
-  type: text
-  config:
-    required: false
-  label: Sottotitolo
-  description: Due righe di descrizione della collezione
 - name: link_allo_shop
   type: text
   config:
@@ -23,5 +17,15 @@ fields:
   type: image_gallery
   config: {}
   label: Galleria
+- name: sottotitolo
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Sottotitolo
+  description: Due righe di descrizione della collezione
 pages:
 - content/collections/spring-summer-2020.md
