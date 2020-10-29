@@ -21,7 +21,7 @@ sections:
   templates:
   - collection
 - type: directory
-  path: content/posts
+  path: content/news
   label: Posts
   create: documents
   match: "**/*"
