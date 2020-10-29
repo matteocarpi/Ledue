@@ -58,6 +58,14 @@ module.exports = {
         path: `${__dirname}/content`,
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'uploads',
+        // eslint-disable-next-line no-undef
+        path: `${__dirname}/content/images`,
+      },
+    },
     // {
     //   resolve: 'gatsby-source-filesystem',
     //   options: {
