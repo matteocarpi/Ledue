@@ -23,3 +23,5 @@ fields:
   type: image_gallery
   config: {}
   label: Galleria
+pages:
+- content/collections/spring-summer.md
