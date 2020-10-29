@@ -18,6 +18,8 @@ sections:
   label: Collections
   create: documents
   match: "**/*"
+  templates:
+  - collection
 - type: directory
   path: content/posts
   label: Posts
