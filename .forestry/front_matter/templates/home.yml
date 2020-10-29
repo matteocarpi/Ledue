@@ -9,12 +9,19 @@ fields:
   label: Title
   default: Home
   hidden: false
-- name: slider
-  type: include
-  config: {}
-  template: slide
+- name: sliderr
+  type: field_group_list
+  fields:
+  - name: slide
+    type: include
+    config: {}
+    template: slide
+    label: Slide
+  config:
+    min: 
+    max: 
+    labelField: 
   label: Slider
-  description: Le foto che scorreranno all'apertura della home
 - name: welcome_text
   type: textarea
   default: ''
