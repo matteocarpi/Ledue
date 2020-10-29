@@ -52,3 +52,5 @@ fields:
   label: Facebook
   description: 'Inserisci il link completo (esempio: <a href="https://www.facebook.com/L%C4%92DUE-106346091148913"
     title="https://www.facebook.com/L%C4%92DUE-106346091148913" target="_blank">https://www.facebook.com/L%C4%92DUE-106346091148913</a>)'
+pages:
+- content/impostazioni_contatti.md
