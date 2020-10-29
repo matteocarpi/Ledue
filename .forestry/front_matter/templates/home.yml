@@ -27,7 +27,7 @@ fields:
   default: ''
   config:
     required: false
-    wysiwyg: false
+    wysiwyg: true
     schema:
       format: markdown
   label: Welcome Text
@@ -41,7 +41,7 @@ fields:
     default: ''
     config:
       required: false
-      wysiwyg: false
+      wysiwyg: true
       schema:
         format: markdown
     label: Biografia
