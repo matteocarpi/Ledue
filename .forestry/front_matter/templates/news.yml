@@ -8,3 +8,5 @@ fields:
     maxSize: 64
   label: Foto
   description: La foto grande che apparirà in cima alla pagina News
+pages:
+- content/pages/news.md
