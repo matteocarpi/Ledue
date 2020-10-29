@@ -12,8 +12,28 @@ fields:
 - name: slider
   type: include
   config: {}
-  template: post
+  template: slide
   label: Slider
   description: Le foto che scorreranno all'apertura della home
+- name: welcome_text
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Welcome Text
+  description: Due righe di introduzione su Lèdue
+- name: about_us
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: About Us
+  description: Due righe su di voi
 pages:
 - content/pages/home.md
