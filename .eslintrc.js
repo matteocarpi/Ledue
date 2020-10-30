@@ -6,6 +6,12 @@ const warn = 1;
 const error = 2;
 
 module.exports = {
+  'env': {
+    'node': true,
+    'browser': true,
+    'es2021': true,
+  },
+
   'extends': [
     'eslint:recommended',
     'plugin:react/recommended',
@@ -17,7 +23,7 @@ module.exports = {
   ],
 
   'parserOptions': {
-    'ecmaVersion': 2018,
+    'ecmaVersion': 12,
     'sourceType': 'module',
     'ecmaFeatures': { 'jsx': true },
   },
@@ -57,5 +63,6 @@ module.exports = {
 
     'react-hooks/rules-of-hooks': error,
     'react-hooks/exhaustive-deps': error,
+    'object-curly-spacing': [warn, 'always'],
   },
 };
