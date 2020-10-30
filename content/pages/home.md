@@ -1,6 +1,6 @@
 ---
 title: Home
-sliderr:
+slider:
 - foto: "/content/images/odp-officina-del-poggio-ss20-biciclutch.jpg"
   colore_del_logo: Bianco
 - foto: "/content/images/cvbnm.jpg"

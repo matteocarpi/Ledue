@@ -9,7 +9,7 @@ fields:
   label: Title
   default: Home
   hidden: false
-- name: sliderr
+- name: slider
   type: field_group_list
   fields:
   - name: slide
