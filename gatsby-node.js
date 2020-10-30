@@ -45,7 +45,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   const posts = graphql(`
     query {
-      allFile(filter: {relativeDirectory: {eq: "posts"}}) {
+      allFile(filter: {relativeDirectory: {eq: "news"}}) {
         edges {
           node {
             childMarkdownRemark {
