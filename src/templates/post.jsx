@@ -3,16 +3,15 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
-const Post = ({data}) => {
-  return (
-    <div>
-      <h1>{data.postData.frontmatter.title}</h1>
-      <section
-        dangerouslySetInnerHTML={{ __html: data.postData.html }}
-      />
-    </div>
-  );
-};
+const Post = ({ data }) => (
+  <div>
+    <h1>{data.postData.frontmatter.title}</h1>
+    <section
+      // eslint-disable-next-line react/no-danger
+      dangerouslySetInnerHTML={{ __html: data.postData.html }}
+    />
+  </div>
+);
 
 export default Post;
 
@@ -28,5 +27,6 @@ query PostData($slug: String!) {
 `;
 
 Post.propTypes = {
+  // eslint-disable-next-line react/require-default-props
   data: PropTypes.node,
 };

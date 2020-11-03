@@ -35,7 +35,7 @@ exports.createPages = ({ graphql, actions }) => {
     result.data.allFile.edges.forEach(({ node }) => {
       createPage({
         path: node.childMarkdownRemark.fields.slug,
-        component: path.resolve('./src/templates/collection.js'),
+        component: path.resolve('./src/templates/collection.jsx'),
         context: {
           slug: node.childMarkdownRemark.fields.slug,
         },
@@ -61,7 +61,7 @@ exports.createPages = ({ graphql, actions }) => {
     result.data.allFile.edges.forEach(({ node }) => {
       createPage({
         path: node.childMarkdownRemark.fields.slug,
-        component: path.resolve('./src/templates/post.js'),
+        component: path.resolve('./src/templates/post.jsx'),
         context: {
           slug: node.childMarkdownRemark.fields.slug,
         },
