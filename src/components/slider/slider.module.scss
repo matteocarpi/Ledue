@@ -2,7 +2,33 @@
 
 .container {
     position: relative;
+    text-align: center;
+    height: min-content;
+    min-height: 800px;
+    overflow: hidden;
+
+    .logoWrapper {
+        position: absolute;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 20vh;
+        margin-top: 20%;
+        .logo {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .slide {
+        position: absolute;
+        
+    }
+
 }
+
 .slide.active {
     opacity: 1;
 } 
@@ -12,8 +38,6 @@
     position: absolute !important;
     top: 0;
     width: 100%;
-    height: 80vh;
-    min-height: 800px;
     z-index: -1;
     transition: 1.5s;
 }

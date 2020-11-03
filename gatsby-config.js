@@ -69,6 +69,14 @@ module.exports = {
     //     path: `${__dirname}/content/posts`,
     //   },
     // },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rules: {
+          include: `${__dirname}/content/svg`,
+        },
+      },
+    },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     // 'gatsby-plugin-sharp',
