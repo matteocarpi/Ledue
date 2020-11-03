@@ -70,3 +70,6 @@ yarn-error.log
 
 # Design
 Design/
+
+# Local Netlify folder
+.netlify
