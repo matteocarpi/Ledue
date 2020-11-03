@@ -45,8 +45,8 @@ const Slider = ({ slides }) => {
             className={styles.image}
           >
             {slide.colore_del_logo === 'Nero'
-              ? <LogoDark />
-              : <LogoLight />}
+              ? <LogoDark className={styles.logo} />
+              : <LogoLight className={styles.logo} />}
           </BackgroundImage>
         </div>
       ))}
