@@ -1,7 +1,6 @@
 import React from 'react';
-
 import { graphql, useStaticQuery } from 'gatsby';
-import PropTypes from 'prop-types';
+
 import Layout from '../../components/layout';
 import SEO from '../../components/seo';
 import Slider from '../../components/slider';
@@ -15,6 +14,7 @@ const Home = () => {
               slider {
                 colore_del_logo
                 foto {
+                  id
                   childImageSharp {
                     fluid {
                       ...GatsbyImageSharpFluid
@@ -38,7 +38,3 @@ const Home = () => {
 };
 
 export default Home;
-
-Home.propTypes = {
-  data: PropTypes.node,
-};

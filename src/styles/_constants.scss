@@ -1,2 +1,7 @@
 $blue: #3B4566;
 $yellow: #F6D98E;
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
