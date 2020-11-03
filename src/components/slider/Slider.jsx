@@ -11,7 +11,7 @@ import styles from './slider.module.scss';
 const Slider = ({ slides }) => {
   const [index, setIndex] = useState(0);
 
-  const pause = 2000;
+  const pause = 10000;
 
   const slidesNumber = slides.length;
 
