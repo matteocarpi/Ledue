@@ -32,7 +32,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
-        fonts: ['Raleway: 300, 400, 500, 700, 800, 900'],
+        fonts: ['Raleway\\:300,400,500,700,800,900'],
         display: 'swap',
       },
     },
@@ -81,6 +81,12 @@ module.exports = {
         theme_color: '#4A3030',
         display: 'minimal-ui',
         icon: 'src/images/favicon.png', // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-anchor-links',
+      options: {
+        offset: -100,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

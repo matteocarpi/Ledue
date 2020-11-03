@@ -3,6 +3,15 @@
 html, body {
     margin: 0;
     font-family: Raleway, Helvetica;
+    hyphens: auto;
+}
+
+h3 {
+    font-family: Raleway, Helvetica;
+    color: $black;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
 }
 
 p {
