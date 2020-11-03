@@ -4,6 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import Layout from '../../components/layout';
 import SEO from '../../components/seo';
 import Slider from '../../components/slider';
+
 import styles from './Home.module.scss';
 
 const Home = () => {
