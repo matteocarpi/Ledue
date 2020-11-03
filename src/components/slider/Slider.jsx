@@ -44,7 +44,9 @@ const Slider = ({ slides }) => {
             fluid={slide.foto.childImageSharp.fluid}
             className={styles.image}
           >
-            <LogoDark />
+            {slide.colore_del_logo === 'Nero'
+              ? <LogoDark />
+              : <LogoLight />}
           </BackgroundImage>
         </div>
       ))}
