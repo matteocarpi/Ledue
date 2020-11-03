@@ -1,6 +1,11 @@
 .content {
-    height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
+    align-items: center;
+
+    .welcome_text {
+        margin: 3rem;
+        max-width: 600px;
+    }
 }

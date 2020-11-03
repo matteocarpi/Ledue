@@ -11,6 +11,7 @@ const Home = () => {
     query HomeQuery {
         homeData: markdownRemark(id: {eq: "f60a85e5-16d8-5343-98e3-e22b022a528c"}) {
             frontmatter {
+              welcome_text
               slider {
                 colore_del_logo
                 foto {
@@ -30,8 +31,13 @@ const Home = () => {
 
     <Layout>
       <SEO title="Home" />
+      <Slider slides={data.homeData.frontmatter.slider} />
       <main className={styles.content}>
-        <Slider slides={data.homeData.frontmatter.slider} />
+        <p
+          className={styles.welcome_text}
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: data.homeData.frontmatter.welcome_text }}
+        />
       </main>
     </Layout>
   );
