@@ -1,0 +1,26 @@
+.wrapper {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+}
+
+.container {
+    padding: 1rem 2rem;
+}
+
+.image {
+    position: relative;
+    height: 0;
+    padding: 100% / 3 * 2 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:before, &:after {
+        filter: brightness(0.65)
+    }
+}
+
+.collection_title {
+    margin: 0 2rem;
+    filter: brightness(1) !important;
+}

@@ -2,8 +2,15 @@
 
 html, body {
     margin: 0;
-    font-family: Raleway, Helvetica;
+    font-family: Quicksand, Helvetica;
     hyphens: auto;
+}
+
+h1.giant {
+    font-size: 50px;
+    font-weight: 300;
+    text-transform: Uppercase;
+    text-decoration: none;
 }
 
 h3 {
@@ -19,4 +26,8 @@ p {
     font-size: 15px;
     text-align: justify;
     line-height: 1.67;
+}
+
+.fondotinta {
+    color: $fondotinta;
 }
