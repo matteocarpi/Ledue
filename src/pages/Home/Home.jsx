@@ -30,7 +30,7 @@ const Home = () => {
 
   return (
 
-    <Layout>
+    <Layout isHome>
       <SEO title="Home" />
       <Slider slides={data.homeData.frontmatter.slider} />
       <main className={styles.content}>

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import MobileHeader from './mobile-header/MobileHeader';
 import MobileNavigation from './mobile-navigation/MobileNavigation';
 
-const Layout = ({ children }) => {
+const Layout = ({ isHome, children }) => {
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleNavigation = () => {
@@ -16,15 +16,20 @@ const Layout = ({ children }) => {
   return (
     <>
       <main>
-        <MobileHeader onOpen={toggleNavigation} />
+        <MobileHeader isHome={isHome} onOpen={toggleNavigation} />
         {children}
       </main>
     </>
   );
 };
 
+Layout.defaultProps = {
+  isHome: false,
+};
+
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  isHome: PropTypes.bool,
 };
 
 export default Layout;
