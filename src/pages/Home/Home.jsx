@@ -41,6 +41,7 @@ const Home = () => {
                         fluid {
                           ...GatsbyImageSharpFluid
                         }
+                        id
                       }
                     }
                     link_allo_shop
