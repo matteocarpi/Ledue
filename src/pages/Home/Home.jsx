@@ -5,7 +5,7 @@ import Layout from '../../components/layout';
 import SEO from '../../components/seo';
 import Slider from '../../components/slider';
 import CollectionPreview from '../../components/collection-preview';
-
+import NewsPreview from '../../components/news-preview';
 import styles from './Home.module.scss';
 
 const Home = () => {
@@ -50,9 +50,33 @@ const Home = () => {
               }
             }
           }
+          news: allFile(filter:{relativeDirectory: {eq: "news"}}) {
+              edges {
+                node {
+                  childMarkdownRemark {
+                    fields {
+                      slug
+                    }
+                    frontmatter {
+                      title
+                      foto {
+                        childImageSharp {
+                          fluid {
+                            ...GatsbyImageSharpFluid
+                          }
+                        }
+                      }
+                    }
+                    html
+                  }
+                }
+              }
+            }
+          
     }`);
 
   const collectionData = data.collection.edges[0].node;
+  const newsData = data.news.edges;
 
   return (
 
@@ -67,6 +91,8 @@ const Home = () => {
         />
 
         <CollectionPreview collection={collectionData} />
+
+        <NewsPreview news={newsData} />
       </main>
     </Layout>
   );
