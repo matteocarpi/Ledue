@@ -1,0 +1,14 @@
+@import '../../styles/constants';
+
+.container {
+    display: flex;
+    align-items: center;
+    color: $fondotinta;
+    font-size: 25px;
+    font-weight: bold;
+    
+    .arrow {
+        margin-right: 0.5rem;
+        padding-top: 0.2rem;
+    }
+}

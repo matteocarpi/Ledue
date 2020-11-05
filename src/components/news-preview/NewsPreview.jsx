@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import BackgroundImage from 'gatsby-background-image';
+import ArrowLink from '../arrow-link';
 
 import styles from './NewsPreview.module.scss';
 
@@ -16,6 +17,9 @@ const NewsPreview = ({ news }) => {
       className={styles.mobile_banner}
       fluid={currentNews.frontmatter.foto.childImageSharp.fluid}
     >
+      <ArrowLink kind="internal" link="/news">
+        news
+      </ArrowLink>
       {/* Arrow link to be insert here */}
     </BackgroundImage>
   );
