@@ -9,6 +9,7 @@ import NewsPreview from '../../components/news-preview';
 import styles from './Home.module.scss';
 import InstaFeed from '../../components/insta-feed';
 import AboutUs from '../../components/about-us';
+import Newsletter from '../../components/newsletter';
 
 const Home = () => {
   const data = useStaticQuery(graphql`
@@ -100,6 +101,7 @@ const Home = () => {
 
         <AboutUs />
 
+        <Newsletter />
       </main>
     </Layout>
   );
