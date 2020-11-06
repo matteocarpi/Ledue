@@ -11,7 +11,9 @@ import CloseIcon from '../../content/svg/close.svg';
 import styles from './Layout.module.scss';
 
 const Layout = ({ isHome, children }) => {
-  const [visited, setVisited] = useState(false);
+  const savedVisit = window.localStorage.getItem('visited');
+
+  const [visited, setVisited] = useState(savedVisit);
 
   const [showMenu, setShowMenu] = useState(false);
 
@@ -20,6 +22,7 @@ const Layout = ({ isHome, children }) => {
   };
 
   const toggleVisited = () => {
+    window.localStorage.setItem('visited', true);
     setVisited(!visited);
   };
 
