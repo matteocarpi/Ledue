@@ -2,7 +2,9 @@
 
 .newsletter_popup {
     position: fixed;
+    right: 0;
     bottom: 0;
+    padding: 2rem;
     background-color: white;
     display: flex;
     flex-direction: column; 
@@ -10,7 +12,7 @@
     align-items: center;
     border: solid 1px $brown;
     z-index: 24253534543;
-    
+
     .close_button {
         position: absolute;
         top: 20px;

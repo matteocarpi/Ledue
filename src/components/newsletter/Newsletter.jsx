@@ -19,6 +19,11 @@ const Newsletter = () => {
   return (
     <div className={styles.container}>
       <h2>Newsletter</h2>
+      <p
+        className={styles.slogan}
+      >
+        Iscriviti alla nostra newsletter per ricevere subito un coupon di 10€
+      </p>
       <form className={styles.form_container} onSubmit={formik.handleSubmit}>
         <input
           id="email"
