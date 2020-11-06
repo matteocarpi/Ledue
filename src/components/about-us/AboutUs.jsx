@@ -22,9 +22,22 @@ const AboutUs = () => {
                 }
             }
         }
+        contacts: markdownRemark(id: {eq: "35ecd537-ce4b-58f5-9450-371e5463c41c"}) {
+            frontmatter {
+                instagram
+                indirizzi_mail {
+                    indirizzo
+                }
+                numeri_di_telefono {
+                    numero
+                }
+            }
+          }
     }
     `);
+
   const aboutData = data.about.frontmatter.about_us;
+  const contactsData = data.contacts.frontmatter;
 
   return (
     <div className={styles.container}>
@@ -40,6 +53,27 @@ const AboutUs = () => {
           dangerouslySetInnerHTML={{ __html: aboutData.biografia }}
           className={styles.biografia}
         />
+
+        <div className={styles.contacts}>
+          {contactsData.indirizzi_mail.map((mail) => (
+            <a
+              key={mail.indirizzo}
+              href={`mailto:${mail.indirizzo}`}
+            >
+              {mail.indirizzo}
+            </a>
+          ))}
+          {contactsData.numeri_di_telefono.map((tel) => (
+            <a
+              key={tel.numero}
+              href={`tel:${tel.numero}`}
+            >
+              {tel.numero}
+            </a>
+          ))}
+
+          <a key={contactsData.instagram} href={contactsData.instagram}>@ledue_handbags</a>
+        </div>
       </div>
     </div>
   );
