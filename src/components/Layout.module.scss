@@ -1,0 +1,20 @@
+@import '../styles/constants';
+
+.newsletter_popup {
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    border: solid 1px $brown;
+
+    .close_button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        z-index: 10;
+    }
+}

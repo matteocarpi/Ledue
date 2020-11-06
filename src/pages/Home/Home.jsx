@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 
-import Layout from '../../components/layout';
+import Layout from '../../components/Layout';
 import SEO from '../../components/seo';
 import Slider from '../../components/slider';
 import CollectionPreview from '../../components/collection-preview';
@@ -86,6 +86,7 @@ const Home = () => {
     <Layout isHome>
       <SEO title="Home" />
       <Slider slides={data.slider.frontmatter.slider} />
+
       <main className={styles.content}>
         <p
           className={styles.welcome_text}
