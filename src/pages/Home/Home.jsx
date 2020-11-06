@@ -7,6 +7,7 @@ import Slider from '../../components/slider';
 import CollectionPreview from '../../components/collection-preview';
 import NewsPreview from '../../components/news-preview';
 import styles from './Home.module.scss';
+import InstaFeed from '../../components/insta-feed';
 
 const Home = () => {
   const data = useStaticQuery(graphql`
@@ -93,6 +94,8 @@ const Home = () => {
         <CollectionPreview collection={collectionData} />
 
         <NewsPreview news={newsData} />
+
+        <InstaFeed />
       </main>
     </Layout>
   );

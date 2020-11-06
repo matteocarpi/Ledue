@@ -6,6 +6,12 @@ html, body {
     hyphens: auto;
 }
 
+h1 {
+    font-weight: 300;
+    color: $black;
+    font-size: 45px;
+    margin: 0;
+}
 h1.giant {
     font-size: 50px;
     font-weight: 300;

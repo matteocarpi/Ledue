@@ -1,0 +1,14 @@
+@import '../../styles/constants';
+
+.container {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .icon {
+        width: 80px;
+        height: auto;
+        color: $black;
+    }
+}

@@ -12,8 +12,6 @@ import Outline from '../../../content/svg/outline.svg';
 import styles from './NewsPreview.module.scss';
 
 const NewsPreview = ({ news }) => {
-  console.log(news);
-
   const [index, setIndex] = useState(0);
 
   const currentNews = news[index].node.childMarkdownRemark;
@@ -47,20 +45,27 @@ const NewsPreview = ({ news }) => {
         </div>
 
         <div className={styles.selector}>
-          {news.map((news, i) => {
+          {news.map((n, i) => {
             if (i === index) {
               return (
-                <Button className={styles.circle} onClick={() => {}}>
+                <Button
+                  key={n.id}
+                  className={styles.circle}
+                  onClick={() => {}}
+                >
                   <Circle />
                 </Button>
               );
-            } if (i !== index) {
-              return (
-                <Button className={styles.circle} onClick={() => setIndex(i)}>
-                  <Outline />
-                </Button>
-              );
             }
+            return (
+              <Button
+                key={n.id}
+                className={styles.circle}
+                onClick={() => setIndex(i)}
+              >
+                <Outline />
+              </Button>
+            );
           })}
         </div>
       </div>
