@@ -1,0 +1,22 @@
+.title_background {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::after, &::before {
+        filter: brightness(0.8);
+    }
+    .title {
+        font-weight: 500;
+    }
+}
+
+.article_container {
+    margin: 3rem 3rem 5rem 3rem;
+}
+
+.article_title {
+    text-align: center;
+    margin: 2rem;
+    text-decoration: none;
+}
