@@ -56,6 +56,7 @@ const Home = () => {
           news: allFile(filter:{relativeDirectory: {eq: "news"}}) {
               edges {
                 node {
+                  id
                   childMarkdownRemark {
                     fields {
                       slug

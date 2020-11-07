@@ -49,7 +49,7 @@ const NewsPreview = ({ news }) => {
             if (i === index) {
               return (
                 <Button
-                  key={n.id}
+                  key={n.node.id}
                   className={styles.circle}
                   onClick={() => {}}
                 >
@@ -59,7 +59,7 @@ const NewsPreview = ({ news }) => {
             }
             return (
               <Button
-                key={n.id}
+                key={n.node.id}
                 className={styles.circle}
                 onClick={() => setIndex(i)}
               >
@@ -76,5 +76,5 @@ const NewsPreview = ({ news }) => {
 export default NewsPreview;
 
 NewsPreview.propTypes = {
-  news: PropTypes.object.isRequired,
+  news: PropTypes.array.isRequired,
 };
