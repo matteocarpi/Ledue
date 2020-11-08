@@ -13,6 +13,12 @@ fields:
   config:
     required: false
   label: Link allo shop
+- name: foto
+  type: file
+  config:
+    maxSize: 64
+  label: Foto
+description: La foto d'anteprima
 - name: galleria
   type: image_gallery
   config: {}

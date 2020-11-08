@@ -8,6 +8,7 @@ sottotitolo: 'Duis autem vel eum iriure dolor in hendrerit in vulputate velit es
   aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
   ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. '
 link_allo_shop: "#"
+foto: "/content/images/odp-officina-del-poggio-ss20-21.jpg"
 galleria:
 - "/content/images/odp-officina-del-poggio-ss20-21.jpg"
 - "/content/images/odp-officina-del-poggio-ss20-toscanoclutch-plexyfuxia.jpg"
