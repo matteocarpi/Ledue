@@ -27,5 +27,3 @@ fields:
       format: markdown
   label: Sottotitolo
   description: Due righe di descrizione della collezione
-pages:
-- content/collections/spring-summer-2020.md
