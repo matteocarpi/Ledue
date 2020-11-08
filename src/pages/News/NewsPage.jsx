@@ -19,7 +19,7 @@ const NewsPage = () => {
               slug
             }
             html
-            excerpt
+            excerpt (format: HTML, pruneLength: 200)
             frontmatter {
               title
               foto {
@@ -60,32 +60,46 @@ const NewsPage = () => {
         <h1 className={cx('giant', 'fondotinta', styles.title)}>News</h1>
       </BackgroundImage>
 
-      {news.map((n) => {
+      {news.map((n, i) => {
+        const isRightPicture = i % 2 !== 0;
+
         const article = n.node;
         return (
           <div
             key={article.id}
-            className={styles.article_container}
+            className={cx(styles.article_container, isRightPicture && styles.right)}
           >
             <Img
-              className={styles.article_foto}
+              className={cx(styles.article_foto, styles.mobile)}
               fluid={{
                 ...article.childMarkdownRemark.frontmatter.foto.childImageSharp.fluid,
                 aspectRatio: 3 / 4,
               }}
             />
-            <Link className={styles.article_title} to={article.childMarkdownRemark.fields.slug}>
-              <h2>
-                {article.childMarkdownRemark.frontmatter.title}
-              </h2>
-            </Link>
-            <p>
-              <p
+
+            <Img
+              className={cx(styles.article_foto, styles.desktop)}
+              fluid={{
+                ...article.childMarkdownRemark.frontmatter.foto.childImageSharp.fluid,
+                aspectRatio: 122 / 100,
+              }}
+            />
+
+            <div className={styles.article_preview}>
+              <Link className={styles.article_title} to={article.childMarkdownRemark.fields.slug}>
+                <h2>
+                  {article.childMarkdownRemark.frontmatter.title}
+                </h2>
+              </Link>
+              <p>
+                <p
             // eslint-disable-next-line react/no-danger
-                dangerouslySetInnerHTML={{ __html: article.childMarkdownRemark.excerpt }}
-              />
-              <Link to={article.childMarkdownRemark.fields.slug}>Leggi di più</Link>
-            </p>
+                  dangerouslySetInnerHTML={{ __html: article.childMarkdownRemark.excerpt }}
+                />
+                <Link to={article.childMarkdownRemark.fields.slug}>Leggi di più</Link>
+              </p>
+            </div>
+
           </div>
         );
       })}

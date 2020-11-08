@@ -20,3 +20,45 @@
     margin: 2rem;
     text-decoration: none;
 }
+
+.desktop {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .desktop {
+        display: flex;
+    }
+
+    .mobile {
+        display: none
+    }
+    .article_container {
+        display: flex;
+        max-width: 1500;
+        justify-content: space-around;
+
+        &.right {
+            flex-direction: row-reverse;
+        }
+        .article_foto {
+            width: 50%;
+            max-width: 830px;
+        }
+        .article_preview {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 2rem;
+            max-width: 590px;
+            .article_title {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+        }
+
+
+    }
+
+
+}
