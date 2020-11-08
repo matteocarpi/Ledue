@@ -1,16 +1,30 @@
 import React from 'react';
-
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
+import BackgroundImage from 'gatsby-background-image';
+import cx from 'classnames';
+
+import Layout from '../components/layout';
+
+import styles from './Post.module.scss';
 
 const Post = ({ data }) => (
-  <div>
-    <h1>{data.postData.frontmatter.title}</h1>
+  <Layout className={styles.wrapper}>
+    <BackgroundImage
+      className={styles.title_slide}
+      fluid={data.postData.frontmatter.foto.childImageSharp.fluid}
+      style={{ backgroundPosition: 'top' }}
+    >
+      <h2 className={cx('fondotinta', styles.title)}>
+        {data.postData.frontmatter.title}
+      </h2>
+    </BackgroundImage>
     <section
+      className={styles.content}
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{ __html: data.postData.html }}
     />
-  </div>
+  </Layout>
 );
 
 export default Post;
@@ -21,6 +35,13 @@ query PostData($slug: String!) {
     html
     frontmatter {
       title
+      foto {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   }
 }

@@ -22,7 +22,11 @@ const MobileHeader = ({ isHome, onOpen }) => {
   });
 
   return (
-    <header className={cx(styles.container, isHome && !hasScrolled && styles.home)}>
+    <header
+      className={
+        cx(styles.container, isHome && !hasScrolled && styles.home, hasScrolled && styles.fixed)
+        }
+    >
       <div className={styles.burger}>
         <Button onClick={onOpen}>
           <Burger />

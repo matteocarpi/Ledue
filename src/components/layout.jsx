@@ -10,7 +10,7 @@ import CloseIcon from '../../content/svg/close.svg';
 
 import styles from './Layout.module.scss';
 
-const Layout = ({ isHome, children }) => {
+const Layout = ({ className, isHome, children }) => {
   const savedVisit = window.localStorage.getItem('visited');
 
   const [visited, setVisited] = useState(savedVisit);
@@ -30,7 +30,7 @@ const Layout = ({ isHome, children }) => {
 
   return (
     <>
-      <main>
+      <main className={className}>
         <MobileHeader isHome={isHome} onOpen={toggleNavigation} />
         {!visited
         && (
@@ -54,11 +54,13 @@ const Layout = ({ isHome, children }) => {
 
 Layout.defaultProps = {
   isHome: false,
+  className: '',
 };
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
   isHome: PropTypes.bool,
+  className: PropTypes.string,
 };
 
 export default Layout;

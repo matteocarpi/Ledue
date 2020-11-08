@@ -1,5 +1,4 @@
 .container {
-    position: fixed;
     background-color: white;
     width: 100%;
     display: flex;
@@ -10,6 +9,10 @@
         flex: 1 1 0;
         content: '';
     }
+}
+
+.container.fixed {
+    position: fixed;
 }
 
 .container.home {
@@ -34,6 +37,7 @@
     max-width: 170px;
     flex: 1 1 0;
 }
+
 
 @media (min-width: 768px) {
     header.container {
