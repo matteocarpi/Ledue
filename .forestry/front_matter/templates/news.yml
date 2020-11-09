@@ -8,5 +8,12 @@ fields:
     maxSize: 64
   label: Foto
   description: La foto grande che apparirà in cima alla pagina News
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+  hidden: true
+  default: News
 pages:
 - content/pages/news.md
