@@ -107,7 +107,7 @@ const Layout = ({ className, isHome, children }) => {
         )}
         {children}
       </main>
-      <Footer />
+      <Footer data={data} />
     </>
   );
 };
