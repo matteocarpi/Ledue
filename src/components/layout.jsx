@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import MobileHeader from './mobile-header/MobileHeader';
@@ -11,11 +11,13 @@ import CloseIcon from '../../content/svg/close.svg';
 import styles from './Layout.module.scss';
 
 const Layout = ({ className, isHome, children }) => {
-  const savedVisit = localStorage.getItem('visited');
-
-  const [visited, setVisited] = useState(savedVisit);
+  const [visited, setVisited] = useState();
 
   const [showMenu, setShowMenu] = useState(false);
+
+  useEffect(() => {
+    setVisited(window.localStorage.getItem('visited'));
+  });
 
   const toggleNavigation = () => {
     setShowMenu(!showMenu);
