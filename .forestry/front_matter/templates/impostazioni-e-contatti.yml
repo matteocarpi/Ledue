@@ -48,5 +48,6 @@ fields:
     required: false
   label: Title
   hidden: true
+  default: Impostazioni
 pages:
 - content/impostazioni_contatti.md
