@@ -8,7 +8,7 @@ fields:
     required: false
   label: Title
   default: Home
-  hidden: false
+  hidden: true
 - name: slider
   type: field_group_list
   fields:
