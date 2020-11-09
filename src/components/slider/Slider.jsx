@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 
 import BackgroundImage from 'gatsby-background-image';
 import cx from 'classnames';
@@ -33,6 +35,16 @@ const Slider = ({ slides }) => {
     return () => clearInterval(interval);
   }, [index]);
 
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  useScrollPosition(({ currPos }) => {
+    if (currPos.y < -50 && !hasScrolled) {
+      setHasScrolled(!hasScrolled);
+    } else if (currPos.y >= -50 && hasScrolled) {
+      setHasScrolled(false);
+    }
+  });
+
   return (
     <div className={styles.container}>
       {slides.map((slide, i) => (
@@ -44,9 +56,20 @@ const Slider = ({ slides }) => {
             fluid={slide.foto.childImageSharp.fluid}
             className={styles.image}
           >
-            {slide.colore_del_logo === 'Nero'
-              ? <LogoDark className={styles.logo} />
-              : <LogoLight className={styles.logo} />}
+            <AnimatePresence>
+              {!hasScrolled && (
+              <motion.div
+                className={styles.logo_wrapper}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >
+                {slide.colore_del_logo === 'Nero'
+                  ? <LogoDark className={styles.logo} />
+                  : <LogoLight className={styles.logo} />}
+              </motion.div>
+              )}
+            </AnimatePresence>
           </BackgroundImage>
         </div>
       ))}
