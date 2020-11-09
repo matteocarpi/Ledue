@@ -32,7 +32,7 @@ const Post = ({ data }) => (
           {data.otherPosts.edges.map((p) => (
             <ArrowLink
               className={styles.other_post_link}
-              to={p.node.childMarkdownRemark.fields.slug}
+              link={p.node.childMarkdownRemark.fields.slug}
               key={p.node.id}
               kind="internal"
               color="black"
