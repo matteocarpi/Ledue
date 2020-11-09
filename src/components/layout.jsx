@@ -68,7 +68,7 @@ const Layout = ({ className, isHome, children }) => {
     setVisited(!visited);
   };
 
-  if (showMenu) return <MobileNavigation onClose={toggleNavigation} />;
+  if (showMenu) return <MobileNavigation onClose={toggleNavigation} data={data} />;
 
   return (
     <>
