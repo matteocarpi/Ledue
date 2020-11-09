@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
 
 import { NavItem, SubItem } from '../utils/nav-item/NavItem';
 import Button from '../utils/button/Button';
@@ -80,6 +80,10 @@ const MobileNavigation = ({ onClose, data }) => {
 
             <NavItem link={social.instagram} kind="external">
               <FontAwesomeIcon className={styles.insta} icon={faInstagram} />
+            </NavItem>
+
+            <NavItem link={social.facebook} kind="external">
+              <FontAwesomeIcon className={styles.insta} icon={faFacebook} />
             </NavItem>
 
           </ul>

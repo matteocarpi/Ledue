@@ -6,6 +6,7 @@ import Footer from './footer';
 import Button from './utils/button';
 import Newsletter from './newsletter';
 import CloseIcon from '../../content/svg/close.svg';
+import DesktopHeader from './desktop-header';
 
 import styles from './Layout.module.scss';
 
@@ -32,6 +33,7 @@ const Layout = ({ className, isHome, children }) => {
   return (
     <>
       <main className={className}>
+        <DesktopHeader data={data} />
         <MobileHeader isHome={isHome} onOpen={toggleNavigation} />
         {!visited
         && (

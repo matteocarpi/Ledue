@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
 
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { Link } from 'gatsby';
@@ -9,11 +10,11 @@ import ArrowIcon from '../../../../content/svg/right_arrow_black.svg';
 import styles from './NavItem.module.scss';
 
 export const NavItem = ({
-  link, kind, onClick, children,
+  link, kind, onClick, children, className,
 }) => {
   if (kind === 'anchor') {
     return (
-      <li>
+      <li className={className}>
         <Button onClick={onClick}>
           <AnchorLink className={styles.text} to={link}>
             <h3>{children}</h3>
@@ -23,7 +24,7 @@ export const NavItem = ({
     );
   } if (kind === 'link') {
     return (
-      <li>
+      <li className={className}>
         <Button onClick={onClick}>
           <Link className={styles.text} to={link}><h3>{children}</h3></Link>
         </Button>
@@ -31,7 +32,7 @@ export const NavItem = ({
     );
   } if (kind === 'action') {
     return (
-      <li>
+      <li className={className}>
         <Button className={styles.text} onClick={onClick}>
           <h3>{children}</h3>
         </Button>
@@ -39,7 +40,7 @@ export const NavItem = ({
     );
   }
   return (
-    <li>
+    <li className={className}>
       <Button onClick={onClick}>
         <a className={styles.text} href={link} target="_blank" rel="noreferrer"><h3>{children}</h3></a>
       </Button>
@@ -48,9 +49,9 @@ export const NavItem = ({
 };
 
 export const SubItem = ({
-  link, kind, onClick, children,
+  link, kind, onClick, children, className,
 }) => (
-  <div className={styles.sub_item}>
+  <div className={cx(className, styles.sub_item)}>
     <ArrowIcon className={styles.arrow_icon} />
     <NavItem link={link} kind={kind} onClick={onClick}>
       <h3>{children}</h3>
@@ -63,6 +64,7 @@ export default NavItem;
 NavItem.defaultProps = {
   children: 'Link',
   link: '#',
+  className: '',
   // eslint-disable-next-line no-console
   onClick: () => console.log('Clicked'),
 };
@@ -72,11 +74,13 @@ NavItem.propTypes = {
   kind: PropTypes.oneOf(['anchor', 'link', 'external', 'action']).isRequired,
   children: PropTypes.any,
   onClick: PropTypes.func,
+  className: PropTypes.string,
 };
 
 SubItem.defaultProps = {
   children: 'Link',
   link: '#',
+  className: '',
   // eslint-disable-next-line no-console
   onClick: () => console.log('Clicked'),
 };
@@ -86,4 +90,5 @@ SubItem.propTypes = {
   kind: PropTypes.oneOf(['anchor', 'link', 'external', 'action']).isRequired,
   children: PropTypes.any,
   onClick: PropTypes.func,
+  className: PropTypes.string,
 };
