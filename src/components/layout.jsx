@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import MobileHeader from './mobile-header/MobileHeader';
 import MobileNavigation from './mobile-navigation/MobileNavigation';
 import Footer from './footer';
@@ -72,22 +72,25 @@ const Layout = ({ className, isHome, children }) => {
   return (
     <>
       <main className={className}>
+        <AnimatePresence>
 
-        {hasScrolled && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            <DesktopHeader fixed data={data} />
-          </motion.div>
-        )}
+          {hasScrolled && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <DesktopHeader fixed data={data} />
+            </motion.div>
+          )}
 
-        {!isHome && (
-          <DesktopHeader data={data} />
-        )}
+          {!isHome && (
+            <DesktopHeader data={data} />
+          )}
+        </AnimatePresence>
 
         <MobileHeader hasScrolled={hasScrolled} isHome={isHome} onOpen={toggleNavigation} />
+
         {!visited
         && (
         <div className={styles.newsletter_popup}>
