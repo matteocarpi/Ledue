@@ -3,18 +3,24 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'gatsby';
+import cx from 'classnames';
 
 import { NavItem, SubItem } from '../utils/nav-item/NavItem';
 import Logo from '../../../content/svg/logo_ledue_dark.svg';
 
 import styles from './DesktopHeader.module.scss';
 
-const DesktopHeader = ({ data }) => {
+const DesktopHeader = ({ data, isHome, hasScrolled }) => {
   const collections = data?.allFile;
   const social = data?.markdownRemark.frontmatter;
 
   return (
-    <header className={styles.desktop_header}>
+    <header
+      className={cx(
+        isHome && !hasScrolled && styles.home, hasScrolled && styles.fixed,
+        styles.desktop_header,
+      )}
+    >
 
       <Link to="/">
         <Logo className={styles.logo} />
@@ -23,7 +29,7 @@ const DesktopHeader = ({ data }) => {
       <nav className={styles.desktop_navigation}>
         <ul className={styles.navigation_content}>
           <NavItem
-            link="#about"
+            link="/#about"
             kind="anchor"
           >
             About
@@ -55,7 +61,7 @@ const DesktopHeader = ({ data }) => {
           </NavItem>
 
           <NavItem
-            link="#contacts"
+            link="/#contacts"
             kind="anchor"
           >
             Contacts
@@ -84,6 +90,12 @@ const DesktopHeader = ({ data }) => {
 
 export default DesktopHeader;
 
+DesktopHeader.defaultProps = {
+  isHome: false,
+};
+
 DesktopHeader.propTypes = {
   data: PropTypes.object.isRequired,
+  isHome: PropTypes.bool,
+  hasScrolled: PropTypes.bool.isRequired,
 };

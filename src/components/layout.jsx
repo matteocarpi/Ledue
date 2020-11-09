@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { useStaticQuery, graphql } from 'gatsby';
+import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import MobileHeader from './mobile-header/MobileHeader';
 import MobileNavigation from './mobile-navigation/MobileNavigation';
 import Footer from './footer';
@@ -11,7 +13,44 @@ import DesktopHeader from './desktop-header';
 import styles from './Layout.module.scss';
 
 const Layout = ({ className, isHome, children }) => {
-  const [visited, setVisited] = useState();
+  const data = useStaticQuery(graphql`
+  {
+    markdownRemark(fields: {slug: {eq: "/impostazioni_contatti/"}}) {
+      frontmatter {
+        instagram
+        facebook
+      }
+    }
+    allFile(filter: {relativeDirectory: {eq: "collections"}}) {
+      edges {
+        node {
+          childMarkdownRemark {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+            }
+            id
+          }
+        }
+      }
+    }
+  }`);
+
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  useScrollPosition(({ currPos }) => {
+    if (currPos.y < -200 && !hasScrolled) {
+      setHasScrolled(!hasScrolled);
+    } else if (currPos.y >= -200 && hasScrolled) {
+      setHasScrolled(false);
+    }
+  });
+
+  const savedVisit = window.localStorage.getItem('visited');
+
+  const [visited, setVisited] = useState(savedVisit);
 
   const [showMenu, setShowMenu] = useState(false);
 
@@ -33,8 +72,8 @@ const Layout = ({ className, isHome, children }) => {
   return (
     <>
       <main className={className}>
-        <DesktopHeader data={data} />
-        <MobileHeader isHome={isHome} onOpen={toggleNavigation} />
+        <DesktopHeader hasScrolled={hasScrolled} isHome={isHome} data={data} />
+        <MobileHeader hasScrolled={hasScrolled} isHome={isHome} onOpen={toggleNavigation} />
         {!visited
         && (
         <div className={styles.newsletter_popup}>

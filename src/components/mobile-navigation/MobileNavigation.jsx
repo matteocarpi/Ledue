@@ -28,7 +28,7 @@ const MobileNavigation = ({ onClose, data }) => {
           <ul>
             <NavItem
               onClick={onClose}
-              link="#about"
+              link="/#about"
               kind="anchor"
             >
               About
@@ -64,7 +64,7 @@ const MobileNavigation = ({ onClose, data }) => {
 
             <NavItem
               onClick={onClose}
-              link="#contacts"
+              link="/#contacts"
               kind="anchor"
             >
               Contacts
