@@ -82,7 +82,6 @@ const Home = () => {
   const collectionData = data.collection.edges[0].node;
   const newsData = data.news.edges;
 
-  console.log(data.slider);
   return (
 
     <Layout isHome>
