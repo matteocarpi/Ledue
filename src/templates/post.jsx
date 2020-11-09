@@ -5,6 +5,7 @@ import BackgroundImage from 'gatsby-background-image';
 import cx from 'classnames';
 
 import Layout from '../components/layout';
+import ArrowLink from '../components/arrow-link';
 
 import styles from './Post.module.scss';
 
@@ -24,6 +25,22 @@ const Post = ({ data }) => (
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{ __html: data.postData.html }}
     />
+
+    <div className={styles.other_posts_wrapper}>
+      <div className={styles.other_posts}>
+        {data.otherPosts.edges.map((p) => (
+          <ArrowLink
+            className={styles.other_post_link}
+            to={p.node.childMarkdownRemark.fields.slug}
+            key={p.node.id}
+            kind="internal"
+            color="black"
+          >
+            {p.node.childMarkdownRemark.frontmatter.title}
+          </ArrowLink>
+        ))}
+      </div>
+    </div>
   </Layout>
 );
 
@@ -39,6 +56,21 @@ query PostData($slug: String!) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  }
+  otherPosts: allFile(filter: {relativeDirectory: {eq: "news"}, childMarkdownRemark: {fields: {slug: {ne: $slug}}}}) {
+    edges {
+      node {
+        id
+        childMarkdownRemark {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
           }
         }
       }

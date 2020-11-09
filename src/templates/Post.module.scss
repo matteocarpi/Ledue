@@ -29,7 +29,20 @@
     }
 }
 
-
+.other_posts_wrapper {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: flex-end;
+}
+.other_posts {
+    align-self: flex-end;
+    margin: 0 1rem;
+}
+.other_post_link {
+    font-size: 20px;
+    margin: 1rem 0;
+}
 @media (min-width: 768px) {
     .title {
         font-size: 50px;
