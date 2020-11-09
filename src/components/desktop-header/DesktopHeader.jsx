@@ -4,23 +4,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'gatsby';
 import cx from 'classnames';
-import { motion } from 'framer-motion';
 
 import { NavItem, SubItem } from '../utils/nav-item/NavItem';
 import Logo from '../../../content/svg/logo_ledue_dark.svg';
 
 import styles from './DesktopHeader.module.scss';
 
-const DesktopHeader = ({ data, isHome, hasScrolled }) => {
+const DesktopHeader = ({ data, isHome, fixed }) => {
   const collections = data?.allFile;
   const social = data?.markdownRemark.frontmatter;
 
   return (
-    <motion.div
-      initial={{ y: -200 }}
-      animate={{ y: 0 }}
+    <header
       className={cx(
-        isHome && !hasScrolled && styles.home, hasScrolled && styles.fixed,
+        isHome && styles.home, fixed && styles.fixed,
         styles.desktop_header,
       )}
     >
@@ -38,7 +35,7 @@ const DesktopHeader = ({ data, isHome, hasScrolled }) => {
             About
           </NavItem>
 
-          <NavItem className={styles.second_level_wrapper} kind="action" link="#">
+          <NavItem className={styles.second_level_wrapper} kind="parent" link="#">
             Collections
             <ul className={styles.second_level}>
               {collections.edges.map((colData) => {
@@ -87,7 +84,7 @@ const DesktopHeader = ({ data, isHome, hasScrolled }) => {
 
         </ul>
       </nav>
-    </motion.div>
+    </header>
   );
 };
 
@@ -95,10 +92,11 @@ export default DesktopHeader;
 
 DesktopHeader.defaultProps = {
   isHome: false,
+  fixed: false,
 };
 
 DesktopHeader.propTypes = {
   data: PropTypes.object.isRequired,
   isHome: PropTypes.bool,
-  hasScrolled: PropTypes.bool.isRequired,
+  fixed: PropTypes.bool,
 };

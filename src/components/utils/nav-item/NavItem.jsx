@@ -38,6 +38,12 @@ export const NavItem = ({
         </Button>
       </li>
     );
+  } if (kind === 'parent') {
+    return (
+      <li className={cx(className, styles.text)}>
+        <h3>{children}</h3>
+      </li>
+    );
   }
   return (
     <li className={className}>
@@ -54,7 +60,7 @@ export const SubItem = ({
   <div className={cx(className, styles.sub_item)}>
     <ArrowIcon className={styles.arrow_icon} />
     <NavItem link={link} kind={kind} onClick={onClick}>
-      <h3>{children}</h3>
+      {children}
     </NavItem>
   </div>
 );
@@ -71,7 +77,7 @@ NavItem.defaultProps = {
 
 NavItem.propTypes = {
   link: PropTypes.string,
-  kind: PropTypes.oneOf(['anchor', 'link', 'external', 'action']).isRequired,
+  kind: PropTypes.oneOf(['anchor', 'link', 'external', 'action', 'parent']).isRequired,
   children: PropTypes.any,
   onClick: PropTypes.func,
   className: PropTypes.string,
@@ -87,7 +93,7 @@ SubItem.defaultProps = {
 
 SubItem.propTypes = {
   link: PropTypes.string,
-  kind: PropTypes.oneOf(['anchor', 'link', 'external', 'action']).isRequired,
+  kind: PropTypes.oneOf(['anchor', 'link', 'external', 'action', 'parent']).isRequired,
   children: PropTypes.any,
   onClick: PropTypes.func,
   className: PropTypes.string,

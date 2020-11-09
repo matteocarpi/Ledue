@@ -25,7 +25,6 @@ const MobileHeader = ({ isHome, onOpen, hasScrolled }) => (
       <Logo className={styles.logo} />
     </Link>
   </header>
-
 );
 
 export default MobileHeader;
