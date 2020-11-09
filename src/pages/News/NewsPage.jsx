@@ -34,7 +34,7 @@ const NewsPage = () => {
         }
       }
     }
-      pageInfo: markdownRemark(id: {eq: "81a8aec2-c30d-5c23-bd1b-713cc49f7cc2"}) {
+      pageInfo: markdownRemark(frontmatter: {title: {eq: "News"}}) {
         frontmatter {
           title
           foto {

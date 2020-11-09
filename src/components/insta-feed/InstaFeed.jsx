@@ -9,7 +9,7 @@ import styles from './InstaFeed.module.scss';
 const InstaFeed = () => {
   const data = useStaticQuery(graphql`
     query {
-      markdownRemark(id: {eq: "35ecd537-ce4b-58f5-9450-371e5463c41c"}) {
+      markdownRemark(frontmatter: {title: {eq: "Impostazioni"}}) {
         frontmatter {
           instagram
         }

@@ -8,7 +8,7 @@ import styles from './AboutUs.module.scss';
 const AboutUs = () => {
   const data = useStaticQuery(graphql`
     {
-        about: markdownRemark(id: {eq: "f60a85e5-16d8-5343-98e3-e22b022a528c"}) {
+        about: markdownRemark(frontmatter: {title: {eq: "Home"}}) {
             frontmatter {
                 about_us {
                     biografia
@@ -22,7 +22,7 @@ const AboutUs = () => {
                 }
             }
         }
-        contacts: markdownRemark(id: {eq: "35ecd537-ce4b-58f5-9450-371e5463c41c"}) {
+        contacts: markdownRemark(frontmatter: {title: {eq: "Impostazioni"}}) {
             frontmatter {
                 instagram
                 indirizzi_mail {
