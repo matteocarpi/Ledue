@@ -82,6 +82,5 @@ query PostData($slug: String!) {
 `;
 
 Post.propTypes = {
-  // eslint-disable-next-line react/require-default-props
-  data: PropTypes.node,
+  data: PropTypes.object.isRequired,
 };
