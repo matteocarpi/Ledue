@@ -40,7 +40,7 @@ const AboutUs = () => {
   const contactsData = data.contacts.frontmatter;
 
   return (
-    <div className={styles.container}>
+    <div id="about" className={styles.container}>
       <h1 className={cx('giant', 'black', styles.mobile)}>About us</h1>
       <Img
         className={styles.image}
@@ -54,7 +54,7 @@ const AboutUs = () => {
           className={styles.biografia}
         />
 
-        <div className={styles.contacts}>
+        <div id="contacts" className={styles.contacts}>
           {contactsData.indirizzi_mail.map((mail) => (
             <a
               key={mail.indirizzo}

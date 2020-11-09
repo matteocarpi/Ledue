@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'gatsby';
 
 import { NavItem, SubItem } from '../utils/nav-item/NavItem';
 import Logo from '../../../content/svg/logo_ledue_dark.svg';
@@ -14,7 +15,10 @@ const DesktopHeader = ({ data }) => {
 
   return (
     <header className={styles.desktop_header}>
-      <Logo className={styles.logo} />
+
+      <Link to="/">
+        <Logo className={styles.logo} />
+      </Link>
 
       <nav className={styles.desktop_navigation}>
         <ul className={styles.navigation_content}>
