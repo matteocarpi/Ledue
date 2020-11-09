@@ -10,37 +10,39 @@ import ArrowLink from '../components/arrow-link';
 import styles from './Post.module.scss';
 
 const Post = ({ data }) => (
-  <Layout className={styles.wrapper}>
-    <BackgroundImage
-      className={styles.title_slide}
-      fluid={data.postData.frontmatter.foto.childImageSharp.fluid}
-      style={{ backgroundPosition: 'top' }}
-    >
-      <h2 className={cx('fondotinta', styles.title)}>
-        {data.postData.frontmatter.title}
-      </h2>
-    </BackgroundImage>
-    <section
-      className={styles.content}
+  <Layout>
+    <main className={styles.wrapper}>
+      <BackgroundImage
+        className={styles.title_slide}
+        fluid={data.postData.frontmatter.foto.childImageSharp.fluid}
+        style={{ backgroundPosition: 'top' }}
+      >
+        <h2 className={cx('fondotinta', styles.title)}>
+          {data.postData.frontmatter.title}
+        </h2>
+      </BackgroundImage>
+      <section
+        className={styles.content}
       // eslint-disable-next-line react/no-danger
-      dangerouslySetInnerHTML={{ __html: data.postData.html }}
-    />
+        dangerouslySetInnerHTML={{ __html: data.postData.html }}
+      />
 
-    <div className={styles.other_posts_wrapper}>
-      <div className={styles.other_posts}>
-        {data.otherPosts.edges.map((p) => (
-          <ArrowLink
-            className={styles.other_post_link}
-            to={p.node.childMarkdownRemark.fields.slug}
-            key={p.node.id}
-            kind="internal"
-            color="black"
-          >
-            {p.node.childMarkdownRemark.frontmatter.title}
-          </ArrowLink>
-        ))}
+      <div className={styles.other_posts_wrapper}>
+        <div className={styles.other_posts}>
+          {data.otherPosts.edges.map((p) => (
+            <ArrowLink
+              className={styles.other_post_link}
+              to={p.node.childMarkdownRemark.fields.slug}
+              key={p.node.id}
+              kind="internal"
+              color="black"
+            >
+              {p.node.childMarkdownRemark.frontmatter.title}
+            </ArrowLink>
+          ))}
+        </div>
       </div>
-    </div>
+    </main>
   </Layout>
 );
 
