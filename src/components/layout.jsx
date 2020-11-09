@@ -95,12 +95,12 @@ const Layout = ({ className, isHome, children }) => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
-              <DesktopHeader fixed data={data} />
+              <DesktopHeader key="fixedHeader" fixed data={data} />
             </motion.div>
           )}
 
           {!isHome && (
-            <DesktopHeader data={data} />
+            <DesktopHeader key="normalHeader" data={data} />
           )}
         </AnimatePresence>
 
