@@ -1,9 +1,19 @@
 import React from 'react';
 import { useFormik } from 'formik';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import styles from './Newsletter.module.scss';
 
 const Newsletter = () => {
+  const data = useStaticQuery(graphql`
+    {
+      markdownRemark(frontmatter: {title: {eq: "Home"}}) {
+        frontmatter {
+          newsletter
+        }
+      }
+    }
+  `);
   const formik = useFormik({
     initialValues: {
       email: '',
@@ -22,7 +32,7 @@ const Newsletter = () => {
       <p
         className={styles.slogan}
       >
-        Iscriviti alla nostra newsletter per ricevere subito un coupon di 10€
+        {data.markdownRemark.frontmatter.newsletter}
       </p>
       <form className={styles.form_container} onSubmit={formik.handleSubmit}>
         <input

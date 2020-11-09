@@ -51,5 +51,12 @@ fields:
       maxSize: 64
     label: Foto
   label: About Us
+- name: newsletter
+  type: text
+  config:
+    required: false
+  label: Testo Newsletter
+  default: ''
+  hidden: false
 pages:
 - content/pages/home.md
