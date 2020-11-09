@@ -72,7 +72,7 @@ const MobileNavigation = ({ onClose, data }) => {
 
             <NavItem
               onClick={onClose}
-              link="http://www.shopify.com"
+              link={social.shopify}
               kind="external"
             >
               Shop

@@ -68,7 +68,7 @@ const DesktopHeader = ({ data, isHome, fixed }) => {
           </NavItem>
 
           <NavItem
-            link="http://www.shopify.com"
+            link={social.shopify}
             kind="external"
           >
             Shop

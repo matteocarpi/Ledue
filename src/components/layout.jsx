@@ -19,6 +19,7 @@ const Layout = ({ className, isHome, children }) => {
       frontmatter {
         instagram
         facebook
+        shopify
       }
     }
     allFile(filter: {relativeDirectory: {eq: "collections"}}) {

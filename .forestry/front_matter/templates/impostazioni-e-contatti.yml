@@ -49,5 +49,11 @@ fields:
   label: Title
   hidden: true
   default: Impostazioni
+- name: shopify
+  type: text
+  config:
+    required: false
+  label: Shopify
+  description: 'Inserisci il link allo shop'
 pages:
 - content/impostazioni_contatti.md
