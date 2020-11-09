@@ -14,7 +14,7 @@ import Newsletter from '../../components/newsletter';
 const Home = () => {
   const data = useStaticQuery(graphql`
     query HomeQuery {
-        slider: markdownRemark(id: {eq: "f60a85e5-16d8-5343-98e3-e22b022a528c"}) {
+        slider: markdownRemark(frontmatter: {title: {eq: "Home"}}) {
             frontmatter {
               welcome_text
               slider {
