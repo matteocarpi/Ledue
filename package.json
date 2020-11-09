@@ -13,6 +13,7 @@
     "@n8tb1t/use-scroll-position": "^2.0.3",
     "classnames": "^2.2.6",
     "formik": "^2.2.2",
+    "framer-motion": "^2.9.4",
     "gatsby": "^2.19.45",
     "gatsby-background-image": "^1.1.2",
     "gatsby-image": "^2.3.1",

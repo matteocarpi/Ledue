@@ -1,4 +1,4 @@
-header.desktop_header {
+div.desktop_header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,7 +26,7 @@ header.desktop_header {
     }
 }
 
-header.desktop_header.home {
+div.desktop_header.home {
     display: none;
 }
 
@@ -78,7 +78,7 @@ ul.second_level {
 }
 
 @media (max-width: 768px) {
-    header.desktop_header {
+    div.desktop_header {
         display: none;
     }
 }

@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'gatsby';
 import cx from 'classnames';
+import { motion } from 'framer-motion';
 
 import { NavItem, SubItem } from '../utils/nav-item/NavItem';
 import Logo from '../../../content/svg/logo_ledue_dark.svg';
@@ -15,7 +16,9 @@ const DesktopHeader = ({ data, isHome, hasScrolled }) => {
   const social = data?.markdownRemark.frontmatter;
 
   return (
-    <header
+    <motion.div
+      initial={{ y: -200 }}
+      animate={{ y: 0 }}
       className={cx(
         isHome && !hasScrolled && styles.home, hasScrolled && styles.fixed,
         styles.desktop_header,
@@ -84,7 +87,7 @@ const DesktopHeader = ({ data, isHome, hasScrolled }) => {
 
         </ul>
       </nav>
-    </header>
+    </motion.div>
   );
 };
 
