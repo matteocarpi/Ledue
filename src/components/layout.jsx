@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-
 import MobileHeader from './mobile-header/MobileHeader';
 import MobileNavigation from './mobile-navigation/MobileNavigation';
 import Footer from './footer';

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { useStaticQuery, graphql } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 
@@ -10,33 +9,8 @@ import IconClose from '../../../content/svg/close.svg';
 import Logo from '../../../content/svg/logo_ledue_dark.svg';
 import styles from './MobileNavigation.module.scss';
 
-const MobileNavigation = ({ onClose }) => {
+const MobileNavigation = ({ onClose, data }) => {
   const [isCollectionOpen, setIsCollectionOpen] = useState(false);
-
-  const data = useStaticQuery(graphql`
-  {
-    markdownRemark(fields: {slug: {eq: "/impostazioni_contatti/"}}) {
-      frontmatter {
-        instagram
-        facebook
-      }
-    }
-    allFile(filter: {relativeDirectory: {eq: "collections"}}) {
-      edges {
-        node {
-          childMarkdownRemark {
-            fields {
-              slug
-            }
-            frontmatter {
-              title
-            }
-            id
-          }
-        }
-      }
-    }
-  }`);
 
   const collections = data?.allFile;
   const social = data?.markdownRemark.frontmatter;
@@ -119,4 +93,5 @@ export default MobileNavigation;
 
 MobileNavigation.propTypes = {
   onClose: PropTypes.func.isRequired,
+  data: PropTypes.object.isRequired,
 };
