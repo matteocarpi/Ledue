@@ -49,9 +49,11 @@ const Layout = ({ className, isHome, children }) => {
     }
   });
 
-  const savedVisit = window.localStorage.getItem('visited');
+  const [visited, setVisited] = useState();
 
-  const [visited, setVisited] = useState(savedVisit);
+  useEffect(() => {
+    setVisited(localStorage.getItem('visited'));
+  });
 
   const [showMenu, setShowMenu] = useState(false);
 
@@ -73,6 +75,18 @@ const Layout = ({ className, isHome, children }) => {
   return (
     <>
       <main className={className}>
+        {!visited && (
+          <div className={styles.newsletter_popup}>
+            <Button
+              type="button"
+              className={styles.close_button}
+              onClick={toggleVisited}
+            >
+              <CloseIcon />
+            </Button>
+            <Newsletter />
+          </div>
+        )}
         <AnimatePresence>
 
           {hasScrolled && (
@@ -92,19 +106,6 @@ const Layout = ({ className, isHome, children }) => {
 
         <MobileHeader hasScrolled={hasScrolled} isHome={isHome} onOpen={toggleNavigation} />
 
-        {!visited
-        && (
-        <div className={styles.newsletter_popup}>
-          <Button
-            type="button"
-            className={styles.close_button}
-            onClick={toggleVisited}
-          >
-            <CloseIcon />
-          </Button>
-          <Newsletter />
-        </div>
-        )}
         {children}
       </main>
       <Footer data={data} />
