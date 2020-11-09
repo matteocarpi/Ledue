@@ -33,7 +33,7 @@ const NewsPreview = ({ news }) => {
           fluid={currentNews.frontmatter.foto.childImageSharp.fluid}
           className={styles.image}
         >
-          <Link to={currentNews.fields.slug}>
+          <Link className={styles.title} to={currentNews.fields.slug}>
             <h1 className={cx('giant', 'fondotinta', styles.title)}>
               {currentNews.frontmatter.title}
             </h1>
