@@ -37,8 +37,8 @@ const InstaFeed = () => {
       </a>
 
       {instaData?.data?.map((picture) => {
-        console.log(picture.url);
-        return (<img alt={picture.caption} key={picture.id} src={picture.url} />);
+        console.log(picture.media_url);
+        return (<img alt={picture.caption} key={picture.id} src={picture.media_url} />);
       })}
     </div>
   );
