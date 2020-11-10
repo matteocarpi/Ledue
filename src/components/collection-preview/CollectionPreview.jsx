@@ -1,21 +1,59 @@
-import React from 'react';
+import React, { useRef, useState, useLayoutEffect } from 'react';
 import PropTypes from 'prop-types';
 import BackgroundImage from 'gatsby-background-image';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 import cx from 'classnames';
+import { motion, useViewportScroll, useTransform } from 'framer-motion';
 
 import styles from './CollectionPreview.module.scss';
 
 const CollectionPreview = ({ collection }) => {
+  const ref = useRef();
+
+  const [scrollPercentageStart, setScrollPercentageStart] = useState();
+  const [scrollPercentageEnd, setScrollPercentageEnd] = useState();
+
+  const { scrollYProgress } = useViewportScroll();
+
+  useLayoutEffect(() => {
+    // Get the distance from the start of the page to the element start
+    const rect = ref.current.getBoundingClientRect();
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const offsetTop = rect.top + scrollTop;
+
+    const offsetStart = rect.top + scrollTop;
+    const offsetEnd = (offsetTop + rect.height);
+
+    const elementScrollStart = offsetStart / document.body.clientHeight;
+    const elementScrollEnd = offsetEnd / document.body.clientHeight;
+
+    setScrollPercentageStart(elementScrollStart);
+    setScrollPercentageEnd(elementScrollEnd);
+  });
+
+  console.log(scrollPercentageStart, scrollPercentageEnd);
+
+  const height = (scrollPercentageEnd - scrollPercentageStart);
+
+  const opacity = useTransform(scrollYProgress, [scrollPercentageStart - height, scrollPercentageEnd - ((height / 4) * 3)], [0, 1]);
+
+  const translateY = useTransform(scrollYProgress, [scrollPercentageStart - height, scrollPercentageEnd - ((height / 4) * 3)], [200, 0]);
+
   const data = collection.childMarkdownRemark.frontmatter;
 
   const uri = collection.childMarkdownRemark.fields.slug;
 
   return (
     <Link to={uri} className={styles.wrapper}>
-
-      <div className={styles.container}>
+      <motion.div
+        ref={ref}
+        style={{
+          opacity,
+          translateY,
+        }}
+        className={styles.container}
+      >
 
         <BackgroundImage
           fluid={data.galleria[0].childImageSharp.fluid}
@@ -58,7 +96,7 @@ const CollectionPreview = ({ collection }) => {
           </div>
         </div>
 
-      </div>
+      </motion.div>
     </Link>
   );
 };
