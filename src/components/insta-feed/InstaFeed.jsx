@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -16,6 +16,19 @@ const InstaFeed = () => {
       }
     }    
   `);
+
+  useEffect(() => {
+    const requestOptions = {
+      method: 'GET',
+      redirect: 'follow',
+    };
+
+    fetch('https://graph.instagram.com/786315888592536/media?fields=id,caption,media_url&access_token=IGQVJVVkM2YU5ESGRZASktHTHRZAcGgyeWN4UlhlaEM5SG1UQ2xnVHdLbVZAxNFdUVEhMNFI3a1VDd1N2Mm1sb3NoQU5rOWVpTzNnWWRBVmsyRlFxSlgyS3Vqa0F0SUpTNGdCeHNNZADFVYTBEVlFlemQySQZDZD', requestOptions)
+      .then((response) => response.text())
+      .then((result) => console.log(result))
+      .catch((error) => console.log('error', error));
+  });
+
   // const [data, setData] = useState();
   // // eslint-disable-next-line no-new
   // useEffect(() => {
@@ -30,10 +43,13 @@ const InstaFeed = () => {
   //     .catch((error) => console.log('error', error));
   // });
   return (
-    <a className={styles.container} target="_blank" rel="noreferrer" href={data.markdownRemark.frontmatter.instagram}>
-      <FontAwesomeIcon className={styles.icon} icon={faInstagram} />
-      <h1>@ledue_handbags</h1>
-    </a>
+    <div className={styles.container}>
+      <a className={styles.container} target="_blank" rel="noreferrer" href={data.markdownRemark.frontmatter.instagram}>
+        <FontAwesomeIcon className={styles.icon} icon={faInstagram} />
+        <h1>@ledue_handbags</h1>
+      </a>
+
+    </div>
   );
 };
 export default InstaFeed;
