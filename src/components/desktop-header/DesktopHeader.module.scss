@@ -4,13 +4,14 @@ header.desktop_header {
     align-items: center;
     .logo {
         width: auto;
-        margin-left: 2rem;
+        padding-left: 2rem;
         max-height: 30px;
     }
     nav.desktop_navigation {
         width: 50%;
-        margin-right: 1rem;
+        padding-right: 1rem;
         ul.navigation_content {
+            padding-left: 0;
             width: 100%;
             display: flex;
             justify-content: space-around;
