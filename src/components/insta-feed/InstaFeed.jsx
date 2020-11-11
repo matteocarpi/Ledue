@@ -34,12 +34,12 @@ const InstaFeed = () => {
   `);
 
   const instaData = data.allInstaNode.edges;
-  
+
   return (
     <div className={styles.container}>
       <a className={styles.container} target="_blank" rel="noreferrer" href={data.markdownRemark.frontmatter.instagram}>
         <FontAwesomeIcon className={styles.icon} icon={faInstagram} />
-        <h1>@ledue_handbags</h1>
+        <h2>@ledue_handbags</h2>
       </a>
 
       <div className={styles.feed_container}>
