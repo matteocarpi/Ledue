@@ -15,11 +15,9 @@ export const NavItem = ({
   if (kind === 'anchor') {
     return (
       <li className={className}>
-        <Button onClick={onClick}>
-          <AnchorLink className={styles.text} to={link}>
-            <h3>{children}</h3>
-          </AnchorLink>
-        </Button>
+        <AnchorLink className={styles.text} to={link}>
+          <h3>{children}</h3>
+        </AnchorLink>
       </li>
     );
   } if (kind === 'link') {
