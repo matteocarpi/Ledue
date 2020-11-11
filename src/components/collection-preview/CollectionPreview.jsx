@@ -32,13 +32,24 @@ const CollectionPreview = ({ collection }) => {
     setScrollPercentageEnd(elementScrollEnd);
   });
 
-  console.log(scrollPercentageStart, scrollPercentageEnd);
-
   const height = (scrollPercentageEnd - scrollPercentageStart);
 
-  const opacity = useTransform(scrollYProgress, [scrollPercentageStart - height, scrollPercentageEnd - ((height / 4) * 3)], [0, 1]);
+  const opacity = useTransform(
+    scrollYProgress,
+    [
+      scrollPercentageStart - height, scrollPercentageEnd - ((height / 4) * 3),
+    ],
+    [1, 1],
+  );
 
-  const translateY = useTransform(scrollYProgress, [scrollPercentageStart - height, scrollPercentageEnd - ((height / 4) * 3)], [200, 0]);
+  const translateX = useTransform(
+    scrollYProgress,
+    [
+      scrollPercentageStart - height,
+      scrollPercentageEnd - height,
+    ],
+    [400, 0],
+  );
 
   const data = collection.childMarkdownRemark.frontmatter;
 
@@ -50,7 +61,7 @@ const CollectionPreview = ({ collection }) => {
         ref={ref}
         style={{
           opacity,
-          translateY,
+          translateX,
         }}
         className={styles.container}
       >
