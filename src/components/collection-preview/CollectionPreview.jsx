@@ -5,7 +5,6 @@ import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 import cx from 'classnames';
 
-import ScrollAppearance from '../utils/EnterOnScroll';
 import styles from './CollectionPreview.module.scss';
 
 const CollectionPreview = ({ collection }) => {
@@ -15,10 +14,8 @@ const CollectionPreview = ({ collection }) => {
 
   return (
     <Link to={uri} className={styles.wrapper}>
-      <ScrollAppearance
-        x={[400, 0]}
-        className={styles.container}
-      >
+      <div className={styles.container}>
+
         <BackgroundImage
           fluid={data.galleria[0].childImageSharp.fluid}
           className={styles.main_image}
@@ -59,8 +56,7 @@ const CollectionPreview = ({ collection }) => {
             />
           </div>
         </div>
-
-      </ScrollAppearance>
+      </div>
     </Link>
   );
 };
