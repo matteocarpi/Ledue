@@ -21,7 +21,14 @@ const MobileNavigation = ({ onClose, data }) => {
         <IconClose />
       </Button>
 
-      <Logo className={styles.logo} />
+      <NavItem
+        link="/"
+        kind="link"
+        onClick={onClose}
+      >
+        <Logo className={styles.logo} />
+      </NavItem>
+
       <div className={styles.nav_wrap}>
 
         <nav className={styles.navigation}>
