@@ -11,4 +11,17 @@
         height: auto;
         color: $black;
     }
+
+    .feed_container {
+        width: 100%;
+        max-width: 1024px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .thumb {
+            min-width: 300px;
+            margin: 1rem;
+        }
+    }
 }
