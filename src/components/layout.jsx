@@ -50,9 +50,15 @@ const Layout = ({ className, isHome, children }) => {
   });
 
   const [visited, setVisited] = useState();
+  const [showNewsletter, setShowNewsletter] = useState(false);
 
   useEffect(() => {
     setVisited(localStorage.getItem('visited'));
+    if (!visited) {
+      setTimeout(() => {
+        setShowNewsletter(true);
+      }, 2000);
+    }
   });
 
   const [showMenu, setShowMenu] = useState(false);
@@ -75,19 +81,25 @@ const Layout = ({ className, isHome, children }) => {
   return (
     <>
       <main className={className}>
-        {!visited && (
-          <div className={styles.newsletter_popup}>
-            <Button
-              type="button"
-              className={styles.close_button}
-              onClick={toggleVisited}
-            >
-              <CloseIcon />
-            </Button>
-            <Newsletter />
-          </div>
-        )}
         <AnimatePresence>
+          {!visited && showNewsletter && (
+            <motion.div
+              initial={{ opacity: 0, x: 300 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 300 }}
+              transition={{ duration: 1 }}
+              className={styles.newsletter_popup}
+            >
+              <Button
+                type="button"
+                className={styles.close_button}
+                onClick={toggleVisited}
+              >
+                <CloseIcon />
+              </Button>
+              <Newsletter />
+            </motion.div>
+          )}
 
           {hasScrolled && (
             <motion.div
