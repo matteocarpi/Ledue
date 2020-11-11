@@ -34,7 +34,7 @@ const InstaFeed = () => {
   `);
 
   const instaData = data.allInstaNode.edges;
-  console.log(instaData);
+  
   return (
     <div className={styles.container}>
       <a className={styles.container} target="_blank" rel="noreferrer" href={data.markdownRemark.frontmatter.instagram}>
