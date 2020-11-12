@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import Img from 'gatsby-image';
+import cx from 'classnames';
 
 import styles from './InstaFeed.module.scss';
 
@@ -44,16 +45,14 @@ const InstaFeed = () => {
 
       <div className={styles.feed_container}>
 
-        {instaData?.map((edge) => (
+        {instaData?.map((edge, index) => (
           <Img
-            className={styles.thumb}
+            className={cx(index > 3 && styles.no_mobile, styles.thumb)}
             alt={edge.node.caption}
-            key={edge.node.id}
             fluid={edge.node.localFile.childImageSharp.fluid}
             aspectRatio={edge.node.localFile.childImageSharp.fluid.aspectRatio}
           />
         ))}
-
       </div>
     </div>
   );
