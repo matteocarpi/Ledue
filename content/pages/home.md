@@ -1,7 +1,7 @@
 ---
 title: Home
 slider:
-- foto: "/content/images/odp-officina-del-poggio-ss20-biciclutch.jpg"
+- foto: "/content/images/odp-officina-del-poggio-ss20-toscanoclutch-plexyfuxia.jpg"
   colore_del_logo: Bianco
 - foto: "/content/images/cvbnm.jpg"
   colore_del_logo: Nero
@@ -17,5 +17,6 @@ about_us:
     duis dolore te feugait nulla facilisi. Stet clita kasd gubergren, no sea takimata
     sanctus est Lorem ipsum dolor sit amet. '
   foto: "/content/images/about-foto.png"
-newsletter: 'Ottieni un coupon di 10€'
+newsletter: Ottieni un coupon di 10€
+
 ---
