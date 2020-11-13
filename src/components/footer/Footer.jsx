@@ -11,7 +11,7 @@ const Footer = ({ data }) => {
 
   return (
     <footer>
-      <span>{`Copyright© ${year}`}</span>
+      <span>{`© ${year}`}</span>
       <Logo className="logo" />
 
       <div className={styles.social}>
