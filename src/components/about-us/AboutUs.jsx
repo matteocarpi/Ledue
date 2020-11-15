@@ -41,7 +41,7 @@ const AboutUs = () => {
 
   return (
     <div id="about" className={styles.container}>
-      <h1 className={cx('giant', 'black', styles.mobile)}>About us</h1>
+      <h1 className={cx('giant', 'black', styles.mobile, styles.title)}>About us</h1>
       <Img
         className={styles.image}
         fluid={aboutData?.foto.childImageSharp.fluid}
