@@ -14,49 +14,60 @@ const CollectionPreview = ({ collection }) => {
 
   return (
     <Link to={uri} className={styles.wrapper}>
-      <div className={styles.container}>
 
-        <BackgroundImage
-          fluid={data.galleria[0].childImageSharp.fluid}
-          className={styles.main_image}
-        >
-          <div className={styles.overlay}>
+      <BackgroundImage
+        fluid={{ ...data.galleria[0].childImageSharp.fluid, aspectRatio: 3 / 4 }}
+        className={styles.main_image}
+      >
+        <div className={styles.overlay}>
 
-            <h1 className={cx('giant', 'fondotinta', styles.collection_title)}>
-              {data.title}
-            </h1>
+          <h1 className={cx('giant', 'fondotinta', styles.collection_title)}>
+            {data.title}
+          </h1>
 
-          </div>
-        </BackgroundImage>
+        </div>
+      </BackgroundImage>
 
-        <div className={styles.galleria}>
-          <div className={styles.left_column}>
-            <Img
-              fluid={data.galleria[1].childImageSharp.fluid}
-              key={data.galleria[1].childImageSharp.id}
-              className={styles.thumb}
-            />
-            <Img
-              fluid={data.galleria[2].childImageSharp.fluid}
-              key={data.galleria[2].childImageSharp.id}
-              className={styles.thumb}
-            />
-          </div>
+      <div className={styles.galleria}>
+        <div className={styles.left_column}>
 
-          <div className={styles.right_column}>
-            <Img
-              fluid={data.galleria[3].childImageSharp.fluid}
-              key={data.galleria[3].childImageSharp.id}
-              className={styles.thumb}
-            />
-            <Img
-              fluid={data.galleria[4].childImageSharp.fluid}
-              key={data.galleria[4].childImageSharp.id}
-              className={styles.thumb}
-            />
-          </div>
+          {data?.galleria.map((edge, index) => {
+            if (index === 1 || index === 2) {
+              return (
+
+                <Img
+                  className={styles.thumb}
+                  fluid={{
+                    ...edge.childImageSharp.fluid,
+                    aspectRatio: index === 2 || index === 3 ? 4 / 3 : 3 / 4,
+                  }}
+                />
+              );
+            }
+          })}
+
+        </div>
+
+        <div className={styles.right_column}>
+
+          {data?.galleria.map((edge, index) => {
+            if (index === 3 || index === 4) {
+              return (
+
+                <Img
+                  className={styles.thumb}
+                  fluid={{
+                    ...edge.childImageSharp.fluid,
+                    aspectRatio: index === 2 || index === 3 ? 4 / 3 : 3 / 4,
+                  }}
+                />
+              );
+            }
+          })}
+
         </div>
       </div>
+
     </Link>
   );
 };

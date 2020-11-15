@@ -42,6 +42,7 @@ const Home = () => {
                     galleria {
                       childImageSharp {
                         fluid {
+                          aspectRatio
                           ...GatsbyImageSharpFluid
                         }
                         id
