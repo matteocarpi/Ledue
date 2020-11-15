@@ -54,6 +54,6 @@ fields:
   config:
     required: false
   label: Shopify
-  description: 'Inserisci il link allo shop'
+  description: Inserisci il link allo shop
 pages:
 - content/impostazioni_contatti.md
