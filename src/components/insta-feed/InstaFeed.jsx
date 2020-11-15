@@ -40,13 +40,14 @@ const InstaFeed = () => {
     <div className={styles.container}>
       <a className={styles.container} target="_blank" rel="noreferrer" href={data.markdownRemark.frontmatter.instagram}>
         <FontAwesomeIcon className={styles.icon} icon={faInstagram} />
-        <h2>@ledue_handbags</h2>
+        <h2 className={styles.nickname}>@ledue_handbags</h2>
       </a>
 
       <div className={styles.feed_container}>
 
         {instaData?.map((edge, index) => (
           <Img
+            key={edge.node.id}
             className={cx(index > 3 && styles.no_mobile, styles.thumb)}
             alt={edge.node.caption}
             fluid={edge.node.localFile.childImageSharp.fluid}
