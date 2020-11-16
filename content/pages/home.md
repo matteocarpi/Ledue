@@ -6,7 +6,7 @@ slider:
 - foto: "/content/images/cvbnm.jpg"
   colore_del_logo: Nero
 welcome_text: |-
-  Lēdue nasce dall'incontro di due personalità che confluiscono in questo progetto, formando un nodo stretto.
+  Lēdue nasce dall'incontro di due personalità che confluiscono in un progetto, formando un nodo stretto.
 
   Immaginiamo e creiamo borse caratterizzate da morbidi movimenti di linee, intrecci e plissé, unendo romanticismo e raffinatezza a uno stile minimal e dinamico.
 
