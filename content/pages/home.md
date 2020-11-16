@@ -20,7 +20,7 @@ about_us:
     duis dolore te feugait nulla facilisi. Stet clita kasd gubergren, no sea takimata
     sanctus est Lorem ipsum dolor sit amet. '
   foto: "/content/images/about-foto.png"
-newsletter: Join the list! Iscriviti alla nostra newsletter per ricevere uno sconto
-  del 10% sul tuo primo acquisto e rimanere sempre aggiornata sulle novità.
+newsletter: Join the list! Iscriviti per ricevere uno sconto del 10% sul tuo primo
+  acquisto e rimanere sempre aggiornata sulle novità.
 
 ---
