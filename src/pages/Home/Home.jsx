@@ -90,15 +90,13 @@ const Home = () => {
       <Slider slides={data.slider.frontmatter.slider} />
 
       <main className={styles.content}>
-        <div>
-          <p
-            className={styles.welcome_text}
+        <div
+          className={styles.welcome_text}
             // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{
-              __html: data.slider.frontmatter.welcome_text,
-            }}
-          />
-        </div>
+          dangerouslySetInnerHTML={{
+            __html: data.slider.frontmatter.welcome_text,
+          }}
+        />
 
         <CollectionPreview collection={collectionData} />
 
