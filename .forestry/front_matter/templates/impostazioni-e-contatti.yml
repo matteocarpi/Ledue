@@ -24,9 +24,9 @@ fields:
       required: false
     label: Numero
   config:
-    min: 
+    min: 1
     max: 
-    labelField: 
+    labelField: numero
   label: Numeri di Telefono
 - name: instagram
   type: text
