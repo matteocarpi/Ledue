@@ -48,7 +48,7 @@ const AboutUs = () => {
       />
       <div className={styles.content}>
         <h1 className={cx('giant', 'black', styles.desktop)}>About us</h1>
-        <p
+        <div
       // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: aboutData.biografia }}
           className={styles.biografia}
