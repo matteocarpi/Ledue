@@ -5,10 +5,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 320px;
+    width: 460px;
     max-width: 550px;
     p.slogan {
         margin: 1rem;
+        text-align: center;
     }
     .form_container {
         width: 100%;
@@ -50,5 +51,9 @@
 @media (max-width: 768px) {
     .form_container {
         flex-direction: column;
+    }
+
+    .container {
+        width: 100%;
     }
 }
