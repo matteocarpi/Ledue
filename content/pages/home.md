@@ -25,6 +25,6 @@ about_us:
   foto: "/content/images/n596191991_889505_3697.JPG"
 newsletter: Join the list! Iscriviti per ricevere uno sconto del 10% sul tuo primo
   acquisto e rimanere sempre aggiornata sulle novità.
-thankyou: Thank you!
+thankyou: Thank you ♥
 
 ---
