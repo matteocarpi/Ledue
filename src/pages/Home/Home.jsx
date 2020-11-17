@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import DOMPurify from 'dompurify';
 
 import Layout from '../../components/layout';
 import SEO from '../../components/seo';
@@ -93,7 +94,9 @@ const Home = () => {
         <p
           className={styles.welcome_text}
           // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{ __html: data.slider.frontmatter.welcome_text }}
+          dangerouslySetInnerHTML={{
+            __html: DOMPurify.sanitize(data.slider.frontmatter.welcome_text),
+          }}
         />
 
         <CollectionPreview collection={collectionData} />
