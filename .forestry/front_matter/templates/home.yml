@@ -43,7 +43,7 @@ fields:
       required: false
       wysiwyg: true
       schema:
-        format: markdown
+        format: html-blocks
     label: Biografia
   - name: foto
     type: file
