@@ -19,7 +19,7 @@ about_us:
     accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue
     duis dolore te feugait nulla facilisi. Stet clita kasd gubergren, no sea takimata
     sanctus est Lorem ipsum dolor sit amet. '
-  foto: "/content/images/about-foto.png"
+  foto: "/content/images/n596191991_889505_3697.JPG"
 newsletter: Join the list! Iscriviti per ricevere uno sconto del 10% sul tuo primo
   acquisto e rimanere sempre aggiornata sulle novità.
 thankyou: Thank you ♥
