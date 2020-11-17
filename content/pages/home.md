@@ -7,17 +7,8 @@ slider:
   colore_del_logo: Nero
 welcome_text: |-
   Lēdue nasce dall'incontro di due personalità che confluiscono in un progetto, formando un nodo stretto.
-
-  ***
-
   Immaginiamo e creiamo borse caratterizzate da morbidi movimenti di linee, intrecci e plissé, unendo romanticismo e raffinatezza a uno stile minimal e dinamico.
-
-  ***
-
   I materiali utilizzati sono pelle e tessuti, dai più poveri ai più lussuosi, un insieme di consistenze e una palette di colori per creare un prodotto allo stesso tempo pratico e di design.
-
-  ***
-
   Lēdue investe interamente in Italia, attraverso la collaborazione con artigiani e fornitori del territorio, con la massima attenzione ai dettagli e alla qualità della lavorazione.
 about_us:
   biografia: 'Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
