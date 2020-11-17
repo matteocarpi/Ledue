@@ -29,7 +29,7 @@ fields:
     required: false
     wysiwyg: true
     schema:
-      format: markdown
+      format: html-blocks
   label: Welcome Text
   description: Due righe di introduzione su Lèdue
 - name: about_us
