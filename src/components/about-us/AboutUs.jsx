@@ -28,9 +28,9 @@ const AboutUs = () => {
                 indirizzi_mail {
                     indirizzo
                 }
-                numeri_di_telefono {
-                    numero
-                }
+                # numeri_di_telefono {
+                #     numero
+                # }
             }
           }
     }
@@ -63,7 +63,7 @@ const AboutUs = () => {
               {mail.indirizzo}
             </a>
           ))}
-          {contactsData.numeri_di_telefono.map((tel) => (
+          {contactsData.numeri_di_telefono?.map((tel) => (
             <a
               key={tel.numero}
               href={`tel:${tel.numero}`}
