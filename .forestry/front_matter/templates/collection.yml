@@ -30,6 +30,6 @@ fields:
     required: false
     wysiwyg: true
     schema:
-      format: markdown
+      format: html-blocks
   label: Sottotitolo
   description: Due righe di descrizione della collezione
