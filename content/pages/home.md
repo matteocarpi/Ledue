@@ -20,7 +20,7 @@ about_us:
     lavorato in vari mondi (editoria e diritto d'autore, scenografia e moda), seguito
     corsi di sartoria. L'inizio di questa storia è il 2020, anno pieno di cambiamenti
     e tempo sospeso. Ci siamo rifugiate in un nostro sogno, facendo ricerca, studiando
-    i materiali, progettando prototipi. Da questo sogno nascono le borse Lēdue.</p>"
+    i materiali, progettando prototipi. Da questo sogno nascono le borse Lēduee</p>"
   foto: "/content/images/n596191991_889505_3697.JPG"
 newsletter: Join the list! Iscriviti per ricevere uno sconto del 10% sul tuo primo
   acquisto e rimanere sempre aggiornata sulle novità.
