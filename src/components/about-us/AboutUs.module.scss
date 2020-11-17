@@ -1,39 +1,40 @@
 @import '../../styles/constants';
 
 .container {
+    margin-bottom: 2rem;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     max-width: 1000px;
-
+    
     h1 {
         text-align: center;
         text-transform: none;
         font-weight: 300;
         margin: 2rem 0;
     }
-
+    
     .title.mobile {
         font-size: 35px;
     }
-
+    
     .image {
         flex: 1;
         margin: 0 5rem;
     }
-
+    
     .biografia {
         margin: 3rem 2rem 1rem 2rem;
         max-width: 700px;
     }
-
+    
     .content {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
+    
     .contacts {
         display: flex;
         flex-direction: column;
@@ -60,6 +61,7 @@
         display: none;
     }
     .container {
+        margin-bottom: 0;
         align-items: center;
         flex-direction: row;
         padding-top: 2rem;
