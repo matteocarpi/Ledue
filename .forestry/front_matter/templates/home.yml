@@ -58,5 +58,12 @@ fields:
   label: Testo Newsletter
   default: ''
   hidden: false
+- name: thankyou
+  type: text
+  config:
+    required: false
+  label: Messaggio di Conferma
+  default: ''
+  hidden: false
 pages:
 - content/pages/home.md
