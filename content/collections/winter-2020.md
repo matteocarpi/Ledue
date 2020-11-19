@@ -2,7 +2,7 @@
 title: Winter Holidays Capsule Collection 2020
 sottotitolo: "<p>È un dicembre diverso dal solito, e noi lo vogliamo attraversare
   con borse in velluto liscio e plissé, che possano scaldare e ammorbidire queste
-  feste...</p>"
+  feste.</p>"
 link_allo_shop: "#"
 foto: "/content/images/odp-officina-del-poggio-ss20-biciclutch.jpg"
 galleria:
