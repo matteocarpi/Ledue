@@ -16,8 +16,8 @@ welcome_text: "<p>Lēdue nasce dall'incontro di due personalità che confluiscon
   pezzo delle nostre collezioni è pensato come una forma di linguaggio che possa contribuire
   a raccontare la propria identità e la propria idea di bellezza.</p>"
 about_us:
-  biografia: "<p>Lēdue è un progetto tutto al femminile, creato da Francesca B. e
-    Francesca S.</p><p>Siamo due amiche cresciute tra abiti sartoriali, artigianalità
+  biografia: "<p>Lēdue è un progetto tutto al femminile, creato da Francesca S. e
+    Francesca B.</p><p>Siamo due amiche cresciute tra abiti sartoriali, artigianalità
     e creatività.</p><p>Con alle spalle una laurea in Architettura e Giurisprudenza,
     abbiamo lavorato in vari mondi ⁠– scenografia e moda, editoria e diritto d'autore
     ⁠– e seguito corsi di sartoria professionale. Un insieme di esperienze ed emozioni
