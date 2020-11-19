@@ -16,16 +16,15 @@ welcome_text: "<p>Lēdue nasce dall'incontro di due personalità che confluiscon
   pezzo delle nostre collezioni è pensato come una forma di linguaggio che possa contribuire
   a raccontare la propria identità e la propria idea di bellezza.</p>"
 about_us:
-  biografia: "<p>Lēdue è un progetto tutto al femminile, creato da Francesca S. e
-    Francesca B.</p><p>Siamo due amiche cresciute tra abiti sartoriali, artigianalità
-    e creatività.</p><p>Con alle spalle una laurea in Architettura e Giurisprudenza,
-    abbiamo lavorato in vari mondi ⁠– scenografia e moda, editoria e diritto d'autore
-    ⁠– e seguito corsi di sartoria professionale. Un insieme di esperienze ed emozioni
-    che si sono unite alla nostra passione per gli accessori e al desiderio di esprimere
-    una nostra forma di creatività.</p><p>L'inizio di questa storia è il 2020, anno
-    pieno di cambiamenti e tempo sospeso. Ci siamo rifugiate in un nostro sogno, facendo
-    ricerca, studiando i materiali, progettando prototipi. Da questo sogno nascono
-    le borse Lēdue.</p>"
+  biografia: "<p>Lēdue è un progetto tutto al femminile.</p><p>Siamo due amiche cresciute
+    tra abiti sartoriali, artigianalità e creatività.</p><p>Con alle spalle una laurea
+    in architettura e giurisprudenza, abbiamo lavorato in vari mondi ⁠– scenografia
+    e moda, editoria e diritto d'autore ⁠– e seguito corsi di sartoria professionale.
+    Un insieme di esperienze ed emozioni che si è unito alla nostra passione per gli
+    accessori e al desiderio di sperimentare nuove forme espressive.</p><p>L'inizio
+    di questa storia è il 2020, anno pieno di cambiamenti e tempo sospeso. Ci siamo
+    rifugiate in un nostro sogno, facendo ricerca, studiando i materiali, progettando
+    prototipi. Da questo sogno nascono le borse Lēdue.</p>"
   foto: "/content/images/n596191991_889505_3697.JPG"
 newsletter: Join the list! Iscriviti per ricevere uno sconto del 10% sul tuo primo
   acquisto e rimanere sempre aggiornata sulle novità.
