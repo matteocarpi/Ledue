@@ -14,7 +14,7 @@ welcome_text: "<p>Lēdue nasce dall'incontro di due personalità che confluiscon
   interamente in Italia, attraverso la collaborazione con artigiani e fornitori del
   territorio, con la massima attenzione ai dettagli e alla qualità della lavorazione.</p><p>Ogni
   pezzo delle nostre collezioni è pensato come una forma di linguaggio che possa contribuire
-  a raccontare la propria identità.</p>"
+  a raccontare la propria identità e la propria idea di bellezza.</p>"
 about_us:
   biografia: "<p>Lēdue è un progetto tutto al femminile, creato da Francesca B. e
     Francesca S.</p><p>Siamo due amiche cresciute tra abiti sartoriali, artigianalità
