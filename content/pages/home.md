@@ -21,9 +21,9 @@ about_us:
     e creatività.</p><p>Con alle spalle una laurea in Architettura e Giurisprudenza,
     abbiamo lavorato in vari mondi ⁠– scenografia e moda, editoria e diritto d'autore
     ⁠– e seguito corsi di sartoria professionale. Un insieme di esperienze ed emozioni
-    che si sono unite alla nostra passione per gli accessori e al desiderio di ricercare
-    un nostro stile, al di là </p><p>L'inizio di questa storia è il 2020, anno pieno
-    di cambiamenti e tempo sospeso. Ci siamo rifugiate in un nostro sogno, facendo
+    che si sono unite alla nostra passione per gli accessori e al desiderio di esprimere
+    una nostra forma di creatività.</p><p>L'inizio di questa storia è il 2020, anno
+    pieno di cambiamenti e tempo sospeso. Ci siamo rifugiate in un nostro sogno, facendo
     ricerca, studiando i materiali, progettando prototipi. Da questo sogno nascono
     le borse Lēdue.</p>"
   foto: "/content/images/n596191991_889505_3697.JPG"
