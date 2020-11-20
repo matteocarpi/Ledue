@@ -1,5 +1,5 @@
 ---
-title: Winter Holidays Capsule Collection 2020
+title: Velvet Capsule Collection 2020
 sottotitolo: "<p>È un dicembre diverso dal solito, e noi lo vogliamo attraversare
   con borse in velluto liscio e plissé, che possano scaldare e ammorbidire queste
   feste.</p>"
