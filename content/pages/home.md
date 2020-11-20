@@ -16,7 +16,7 @@ welcome_text: "<p>Lēdue nasce dall'incontro di due personalità diverse che con
   pezzo delle nostre collezioni è pensato come una forma di linguaggio che possa contribuire
   a raccontare la propria identità e la propria idea di stile.</p>"
 about_us:
-  biografia: "<p>Lēdue è un progetto tutto al femminile. Siamo due amiche cresciute
+  biografia: "<p>Lēdue è un progetto tutto al femminile, creato da due amiche cresciute
     tra abiti sartoriali, artigianalità e creatività.</p><p>Con alle spalle una laurea
     in architettura e giurisprudenza, abbiamo lavorato in vari mondi ⁠– scenografia
     e moda, editoria e diritto d'autore ⁠– e seguito corsi di sartoria professionale.
