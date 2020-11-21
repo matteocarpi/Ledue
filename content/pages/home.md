@@ -25,7 +25,7 @@ about_us:
     storia è il 2020, anno pieno di cambiamenti e tempo sospeso. Ci siamo rifugiate
     in un nostro sogno, facendo ricerca, studiando i materiali, progettando prototipi.
     Da questo sogno nascono le borse Lēdue.</p>"
-  foto: "/content/images/foto-2.jpg"
+  foto: "/content/images/about_us.jpg"
 newsletter: Join the list! Iscriviti per ricevere uno sconto del 10% sul tuo primo
   acquisto e rimanere sempre aggiornata sulle novità.
 thankyou: Thank you ♥
