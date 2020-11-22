@@ -20,7 +20,7 @@ about_us:
     tra abiti sartoriali, artigianalità e creatività.</p><p>Con alle spalle una laurea
     in architettura e giurisprudenza, abbiamo lavorato in vari mondi ⁠– scenografia
     e moda, editoria e diritto d'autore ⁠– e seguito corsi di sartoria professionale.
-    Un insieme di esperienze che abbiamo unito alla nostra passione per gli accessori
+    Un insieme di esperienze che si sono unite alla nostra passione per gli accessori
     e al desiderio di sperimentare nuove forme espressive.</p><p>L'inizio di questa
     storia è il 2020, anno pieno di cambiamenti e tempo sospeso. Ci siamo rifugiate
     in un nostro sogno, facendo ricerca, studiando i materiali, progettando prototipi.
