@@ -8,7 +8,7 @@ slider:
 welcome_text: "<p>Lēdue nasce dall'incontro di due personalità diverse che confluiscono
   in un progetto, formando un nodo stretto.</p><p>Immaginiamo e creiamo borse caratterizzate
   da morbidi movimenti di linee, intrecci e plissé, unendo romanticismo e raffinatezza
-  a uno stile minimal e dinamico.</p><p>I materiali utilizzati sono pelle e tessuti,
+  a uno stile minimal e dinamico.</p><p>I materiali che utilizziamo sono pelle e tessuti,
   dai più poveri ai più lussuosi, un insieme di consistenze e una palette di colori
   per creare un prodotto allo stesso tempo pratico e di design.</p><p>Lēdue investe
   interamente in Italia, attraverso la collaborazione con artigiani e fornitori del
