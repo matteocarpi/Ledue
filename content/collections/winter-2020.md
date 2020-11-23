@@ -1,7 +1,7 @@
 ---
 title: Velvet Capsule Collection 2020
-sottotitolo: "<p>È un dicembre diverso dal solito, e noi lo vogliamo attraversare
-  con morbide borse in velluto liscio e plissé.</p>"
+sottotitolo: "<p>È un inverno diverso dal solito, e noi lo vogliamo attraversare con
+  morbide borse in velluto liscio e plissé.</p>"
 link_allo_shop: "#"
 foto: "/content/images/odp-officina-del-poggio-ss20-biciclutch.jpg"
 galleria:
