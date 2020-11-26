@@ -36,6 +36,7 @@ const CollectionPreview = ({ collection }) => {
               return (
 
                 <Img
+                  key={edge.childImageSharp.id}
                   className={styles.thumb}
                   fluid={{
                     ...edge.childImageSharp.fluid,
@@ -49,12 +50,12 @@ const CollectionPreview = ({ collection }) => {
         </div>
 
         <div className={styles.right_column}>
-
           {data?.galleria.map((edge, index) => {
             if (index === 3 || index === 4) {
               return (
 
                 <Img
+                  key={edge.childImageSharp.id}
                   className={styles.thumb}
                   fluid={{
                     ...edge.childImageSharp.fluid,
