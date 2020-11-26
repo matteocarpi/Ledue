@@ -30,7 +30,7 @@ const Home = () => {
               }
             }
           }
-          collection: allFile(filter: {relativeDirectory: {eq: "collections"}}, limit: 1, sort: {order: ASC, fields: birthTime}) {
+          collection: allFile(filter: {relativeDirectory: {eq: "collections"}}, limit: 1, sort: {order: DESC, fields: birthTime}) {
             edges {
               node {
                 childMarkdownRemark {
