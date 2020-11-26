@@ -20,6 +20,7 @@
     "gatsby-image": "^2.3.1",
     "gatsby-plugin-anchor-links": "^1.1.1",
     "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-mailchimp": "^5.2.2",
     "gatsby-plugin-manifest": "^2.2.48",
     "gatsby-plugin-offline": "^3.0.41",
     "gatsby-plugin-react-helmet": "^3.1.24",

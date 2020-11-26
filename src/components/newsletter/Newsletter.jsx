@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import { useStaticQuery, graphql } from 'gatsby';
 import { motion } from 'framer-motion';
+import addToMailChimp from 'gatsby-plugin-mailchimp';
+
 import styles from './Newsletter.module.scss';
 import Loader from '../utils/loader';
 
 const Newsletter = () => {
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
   const [done, setDone] = useState(false);
 
   const data = useStaticQuery(graphql`
@@ -27,12 +30,12 @@ const Newsletter = () => {
     onSubmit: (values) => {
       setLoading(true);
 
-      setTimeout(() => {
-        setDone(true);
-        setLoading(false);
-      }, 2000);
-      // eslint-disable-next-line no-console
-      console.log(JSON.stringify(values, null, 2));
+      addToMailChimp(values.email)
+        .then(() => {
+          setDone(true);
+          setLoading(false);
+        })
+        .catch(() => setError(true));
     },
 
   });
@@ -40,7 +43,21 @@ const Newsletter = () => {
   return (
     <div className={styles.container}>
       <h2>Newsletter</h2>
-      {loading && <Loader type="TailSpin" />}
+
+      {loading && !error && <Loader type="TailSpin" />}
+
+      {error && (
+        <motion.div
+          initial={{ x: 400, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+        >
+          <p
+            className={styles.slogan}
+          >
+            Ups... qualcosa è andato storto :( riprova più tardi
+          </p>
+        </motion.div>
+      )}
 
       {done && (
         <motion.div

@@ -96,6 +96,13 @@ module.exports = {
         username: '31044158025',
       },
     },
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint: 'https://leduefactory.us7.list-manage.com/subscribe/post?u=1ffadef495fecbc67a8818ffc&amp;id=89d3259e8b',
+        timeout: 3500,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
