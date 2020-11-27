@@ -8,6 +8,17 @@ fields:
     required: false
   label: Title
   description: Nome della collezione
+- name: date
+  type: datetime
+  label: Data
+  description: ''
+  config:
+    required: true
+    date_format: 
+    time_format: 
+    display_utc: false
+  default: now
+  hidden: false
 - name: link_allo_shop
   type: text
   config:
@@ -33,3 +44,5 @@ fields:
       format: html-blocks
   label: Sottotitolo
   description: Due righe di descrizione della collezione
+pages:
+- content/collections/velvet-capsule-collection-2020.md
