@@ -17,5 +17,5 @@ galleria:
 - "/content/images/odp-officina-del-poggio-ss20-sling-black.jpg"
 - "/content/images/odp-officina-del-poggio-ss20-biciclutch.jpg"
 date: 2020-04-01T07:50:30Z
-
+doctype: 'collection'
 ---

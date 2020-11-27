@@ -30,26 +30,24 @@ const Home = () => {
               }
             }
           }
-          collection: allFile(filter: {relativeDirectory: {eq: "collections"}}, limit: 1, sort: {order: DESC, fields: birthTime}) {
+          collection: allMarkdownRemark(filter: {frontmatter: {doctype: {eq: "collection"}}}, sort: {fields: frontmatter___date, order: DESC}, limit: 1) {
             edges {
               node {
-                childMarkdownRemark {
-                  fields {
-                    slug
-                  }
-                  frontmatter {
-                    title
-                    galleria {
-                      childImageSharp {
-                        fluid {
-                          aspectRatio
-                          ...GatsbyImageSharpFluid
-                        }
-                        id
+                fields {
+                  slug
+                }
+                frontmatter {
+                  title
+                  galleria {
+                    childImageSharp {
+                      fluid {
+                        aspectRatio
+                        ...GatsbyImageSharpFluid
                       }
+                      id
                     }
-                    link_allo_shop
                   }
+                  link_allo_shop
                 }
               }
             }

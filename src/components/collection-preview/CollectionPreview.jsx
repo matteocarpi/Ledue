@@ -8,9 +8,9 @@ import cx from 'classnames';
 import styles from './CollectionPreview.module.scss';
 
 const CollectionPreview = ({ collection }) => {
-  const data = collection.childMarkdownRemark.frontmatter;
+  const data = collection.frontmatter;
 
-  const uri = collection.childMarkdownRemark.fields.slug;
+  const uri = collection.fields.slug;
 
   return (
     <Link to={uri} className={styles.wrapper}>
