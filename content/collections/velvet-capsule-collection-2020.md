@@ -11,5 +11,6 @@ galleria:
 - "/content/images/odp-officina-del-poggio-ss20-toscanoclutch-plexyfuxia.jpg"
 - "/content/images/odp-officina-del-poggio-ss20-sling-black.jpg"
 sottotitolo: "<p>BlaBlaBla.</p>"
+date: 2020-11-26T23:00:00Z
 
 ---
