@@ -44,5 +44,12 @@ fields:
       format: html-blocks
   label: Sottotitolo
   description: Due righe di descrizione della collezione
+- name: doctype
+  type: text
+  config:
+    required: false
+  label: DocType
+  hidden: true
+  default: collection
 pages:
 - content/collections/velvet-capsule-collection-2020.md
