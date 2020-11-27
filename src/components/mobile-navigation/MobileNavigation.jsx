@@ -12,7 +12,7 @@ import styles from './MobileNavigation.module.scss';
 const MobileNavigation = ({ onClose, data }) => {
   const [isCollectionOpen, setIsCollectionOpen] = useState(false);
 
-  const collections = data?.allFile;
+  const collections = data?.allMarkdownRemark;
   const social = data?.markdownRemark.frontmatter;
 
   return (
@@ -47,7 +47,7 @@ const MobileNavigation = ({ onClose, data }) => {
             {isCollectionOpen && (
             <ul>
               {collections.edges.map((colData) => {
-                const collection = colData.node.childMarkdownRemark;
+                const collection = colData.node;
                 return (
                   <SubItem
                     key={collection.id}

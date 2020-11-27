@@ -22,6 +22,19 @@ const Layout = ({ className, isHome, children }) => {
         shopify
       }
     }
+    allMarkdownRemark(filter: {frontmatter: {doctype: {eq: "collection"}}}, sort: {fields: frontmatter___date, order: DESC}) {
+    edges {
+      node {
+        id
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+        }
+      }
+    }
+  }
     allFile(filter: {relativeDirectory: {eq: "collections"}}) {
       edges {
         node {

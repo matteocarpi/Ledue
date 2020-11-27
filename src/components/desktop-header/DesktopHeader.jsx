@@ -11,7 +11,7 @@ import Logo from '../../../content/svg/logo_ledue_dark.svg';
 import styles from './DesktopHeader.module.scss';
 
 const DesktopHeader = ({ data, isHome, fixed }) => {
-  const collections = data?.allFile;
+  const collections = data?.allMarkdownRemark;
   const social = data?.markdownRemark.frontmatter;
 
   return (
@@ -39,7 +39,7 @@ const DesktopHeader = ({ data, isHome, fixed }) => {
             Collections
             <ul className={styles.second_level}>
               {collections.edges.map((colData) => {
-                const collection = colData.node.childMarkdownRemark;
+                const collection = colData.node;
                 return (
                   <SubItem
                     key={collection.id}
