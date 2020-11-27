@@ -24,9 +24,11 @@ const Collection = ({ data }) => {
           {data.collectionData.frontmatter.title}
         </h1>
 
-        <p className={styles.sottotitolo}>
-          {data.collectionData.frontmatter.sottotitolo}
-        </p>
+        <div
+          className={styles.sottotitolo}
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: data.collectionData.frontmatter.sottotitolo }}
+        />
 
         <ArrowLink kind="internal" className={styles.shop_link} link="#">shop</ArrowLink>
 
