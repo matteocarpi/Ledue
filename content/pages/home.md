@@ -1,6 +1,8 @@
 ---
 title: Home
 slider:
+- foto: "/content/images/img_4961.JPG"
+  colore_del_logo: Bianco
 - foto: "/content/images/img_4830.JPG"
   colore_del_logo: Bianco
 - foto: "/content/images/odp-officina-del-poggio-ss20-toscanoclutch-plexyfuxia.jpg"
