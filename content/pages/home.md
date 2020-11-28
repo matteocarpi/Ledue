@@ -5,10 +5,6 @@ slider:
   colore_del_logo: Bianco
 - foto: "/content/images/img_4830.JPG"
   colore_del_logo: Bianco
-- foto: "/content/images/odp-officina-del-poggio-ss20-toscanoclutch-plexyfuxia.jpg"
-  colore_del_logo: Bianco
-- foto: "/content/images/cvbnm.jpg"
-  colore_del_logo: Nero
 welcome_text: "<p>Lēdue nasce dall'incontro di due personalità diverse che confluiscono
   in un progetto, formando un nodo stretto.</p><p>Immaginiamo e creiamo borse caratterizzate
   da morbidi movimenti di linee, intrecci e plissé, unendo romanticismo e raffinatezza
