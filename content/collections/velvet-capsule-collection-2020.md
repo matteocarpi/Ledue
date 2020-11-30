@@ -1,7 +1,7 @@
 ---
 title: Velvet Capsule Collection 2020
 link_allo_shop: "#"
-foto: "/content/images/odp-officina-del-poggio-ss20-toscanoclutch-plexyfuxia.jpg"
+foto: "/content/images/img_4749.JPG"
 galleria:
 - "/content/images/odp-officina-del-poggio-ss20-biciclutch.jpg"
 - "/content/images/odp-officina-del-poggio-ss20-bag.jpg"
@@ -11,6 +11,7 @@ galleria:
 - "/content/images/odp-officina-del-poggio-ss20-toscanoclutch-plexyfuxia.jpg"
 - "/content/images/odp-officina-del-poggio-ss20-sling-black.jpg"
 sottotitolo: "<p>BlaBlaBla.</p>"
-date: 2020-11-26T23:00:00Z
-doctype: 'collection'
+date: 2020-11-26T23:00:00.000+00:00
+doctype: collection
+
 ---
