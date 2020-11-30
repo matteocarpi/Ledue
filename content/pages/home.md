@@ -1,8 +1,8 @@
 ---
 title: Home
 slider:
-- foto: "/content/images/img_4961.JPG"
-  colore_del_logo: Bianco
+- foto: "/content/images/img_4947.JPG"
+  colore_del_logo: Nero
 - foto: "/content/images/img_4830.JPG"
   colore_del_logo: Bianco
 welcome_text: "<p>Lēdue nasce dall'incontro di due personalità diverse che confluiscono
