@@ -4,7 +4,7 @@ slider:
 - foto: "/content/images/img_5008.JPG"
   colore_del_logo: Nero
 - foto: "/content/images/img_4832.JPG"
-  colore_del_logo: ''
+  colore_del_logo: Bianco
 - foto: "/content/images/img_4947.JPG"
   colore_del_logo: Nero
 - foto: "/content/images/img_5043.JPG"
