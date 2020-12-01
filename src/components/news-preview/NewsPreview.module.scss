@@ -42,7 +42,7 @@
 .excerpt {
     margin: 0 2rem;
     width: 90%;
-    max-width: 600px;
+    max-width: 500px;
 }
 
 .selector {
@@ -61,5 +61,8 @@
     }
     .container {
         display: flex;
+    }
+    .excerpt {
+        margin: 0 auto;
     }
 }
