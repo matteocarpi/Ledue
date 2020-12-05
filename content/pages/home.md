@@ -30,8 +30,7 @@ about_us:
     in un nostro sogno, facendo ricerca, studiando i materiali, progettando prototipi.
     Da questo sogno nascono le borse Lēdue.</p>"
   foto: "/content/images/about_us-1.jpg"
-newsletter: Join the list! Iscriviti per ricevere uno sconto del 10% sul tuo primo
-  acquisto e rimanere sempre aggiornata sulle novità.
+newsletter: Join the list! Iscriviti per rimanere sempre aggiornata sulle novità.
 thankyou: Thank you ♥
 
 ---
