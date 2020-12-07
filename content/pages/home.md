@@ -1,14 +1,8 @@
 ---
 title: Home
 slider:
-- foto: "/content/images/img_5008.JPG"
+- foto: "/content/images/img_4947.jpg"
   colore_del_logo: Nero
-- foto: "/content/images/img_4832.JPG"
-  colore_del_logo: Bianco
-- foto: "/content/images/img_4947.JPG"
-  colore_del_logo: Nero
-- foto: "/content/images/img_5043.JPG"
-  colore_del_logo: Bianco
 welcome_text: "<p>Lēdue nasce dall'incontro di due personalità diverse che confluiscono
   in un progetto, formando un nodo stretto.</p><p>Immaginiamo e creiamo borse caratterizzate
   da morbidi movimenti di linee, intrecci e plissé, unendo romanticismo e raffinatezza
