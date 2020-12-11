@@ -1,5 +1,5 @@
 ---
 title: News
-foto: "/content/images/img_4830.jpg"
+foto: "/content/images/img_4804.jpg"
 
 ---
