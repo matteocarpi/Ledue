@@ -13,7 +13,7 @@ galleria:
 - "/content/images/img_4961-copy.jpg"
 - "/content/images/img_4942.jpg"
 - "/content/images/img_4832.jpg"
-sottotitolo: "<p>Cinema chiusi e tanta voglia di sognare.</p>"
+sottotitolo: "<p></p>"
 date: 2020-11-26T23:00:00.000+00:00
 doctype: collection
 
