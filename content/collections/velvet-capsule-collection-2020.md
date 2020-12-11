@@ -13,7 +13,7 @@ galleria:
 - "/content/images/img_4942.jpg"
 - "/content/images/img_4832.jpg"
 - "/content/images/img_4804.jpg"
-sottotitolo: "<p>BlaBlaBla.</p>"
+sottotitolo: "<p>Cinema chiusi e tanta voglia di sognare.</p>"
 date: 2020-11-26T23:00:00.000+00:00
 doctype: collection
 
