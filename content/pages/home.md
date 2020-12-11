@@ -3,7 +3,7 @@ title: Home
 slider:
 - foto: "/content/images/img_4947.jpg"
   colore_del_logo: Nero
-- foto: "/content/images/img_4798.jpg"
+- foto: "/content/images/img_4804.jpg"
   colore_del_logo: Nero
 welcome_text: "<p>Lēdue nasce dall'incontro di due personalità diverse che confluiscono
   in un progetto, formando un nodo stretto.</p><p>Immaginiamo e creiamo borse caratterizzate
