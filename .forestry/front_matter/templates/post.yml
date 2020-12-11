@@ -13,5 +13,3 @@ fields:
     maxSize: 64
   label: Foto
   description: La foto d'anteprima
-pages:
-- content/news/un-post.md
