@@ -3,6 +3,7 @@ title: Velvet Capsule Collection 2020
 link_allo_shop: "#"
 foto: "/content/images/img_5043.jpg"
 galleria:
+- "/content/images/img_4986-copy.jpg"
 - "/content/images/img_4915.jpg"
 - "/content/images/img_4757.jpg"
 - "/content/images/img_5014.jpg"
