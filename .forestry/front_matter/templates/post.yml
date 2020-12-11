@@ -13,3 +13,5 @@ fields:
     maxSize: 64
   label: Foto
   description: La foto d'anteprima
+pages:
+- content/news/la-nostra-velvet-capsule-collection-2020-e-online.md
