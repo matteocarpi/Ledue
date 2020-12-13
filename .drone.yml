@@ -7,5 +7,5 @@ steps:
     image: node
     commands:
       - echo "I will build your website now :)"
-      - npm install
+      - yarn install
       - gatsby build
