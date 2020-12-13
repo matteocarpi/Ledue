@@ -1,0 +1,7 @@
+steps:
+  - name: build frontend
+    image: node
+    commands:
+      - "echo I will build your website now :)"
+      - npm install
+      - gatsby build
