@@ -5,8 +5,4 @@ content: "<p>Finalmente il nostro shop è pronto, ci trovate le nostre borse pen
   per questo inverno.<br>Sogniamo di gironzolare in un cinema e guardare un film in
   bianco e nero sul grande schermo, scaldate dalla delicatezza del velluto e dai suoi
   colori accesi.</p>"
-
 ---
-Finalmente il nostro shop è pronto, ci trovate le nostre borse pensate per questo inverno.
-
-Sogniamo di gironzolare in un cinema e guardare un film in bianco e nero sul grande schermo, scaldate dalla delicatezza del velluto e dai suoi colori accesi.

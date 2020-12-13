@@ -21,10 +21,10 @@ const Post = ({ data }) => (
           {data.postData.frontmatter.title}
         </h2>
       </BackgroundImage>
-      <section
+      <div
         className={styles.content}
-      // eslint-disable-next-line react/no-danger
-        dangerouslySetInnerHTML={{ __html: data.postData.html }}
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: data.postData.frontmatter.content }}
       />
 
       <div className={styles.other_posts_wrapper}>
@@ -49,36 +49,41 @@ const Post = ({ data }) => (
 export default Post;
 
 export const query = graphql`
-query PostData($slug: String!) {
-  postData: markdownRemark(fields: {slug: {eq: $slug}}) {
-    html
-    frontmatter {
-      title
-      foto {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
+  query PostData($slug: String!) {
+    postData: markdownRemark(fields: { slug: { eq: $slug } }) {
+      frontmatter {
+        title
+        foto {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        content
+      }
+    }
+    otherPosts: allFile(
+      filter: {
+        relativeDirectory: { eq: "news" }
+        childMarkdownRemark: { fields: { slug: { ne: $slug } } }
+      }
+    ) {
+      edges {
+        node {
+          id
+          childMarkdownRemark {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+            }
           }
         }
       }
     }
   }
-  otherPosts: allFile(filter: {relativeDirectory: {eq: "news"}, childMarkdownRemark: {fields: {slug: {ne: $slug}}}}) {
-    edges {
-      node {
-        id
-        childMarkdownRemark {
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-          }
-        }
-      }
-    }
-  }
-}
 `;
 
 Post.propTypes = {
