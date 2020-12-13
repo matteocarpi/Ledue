@@ -7,5 +7,5 @@ steps:
     image: node
     commands:
       - echo "I will build your website now :)"
-      - yarn install --network-timeout 1000000 
-      - gatsby build
+      - yarn install --network-timeout 1000000
+      - yarn build
