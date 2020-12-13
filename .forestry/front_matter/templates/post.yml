@@ -1,6 +1,6 @@
 ---
 label: Post
-hide_body: false
+hide_body: true
 fields:
 - name: title
   type: text
@@ -13,5 +13,14 @@ fields:
     maxSize: 64
   label: Foto
   description: La foto d'anteprima
+- name: content
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: Content
 pages:
 - content/news/la-nostra-velvet-capsule-collection-2020-e-online.md
