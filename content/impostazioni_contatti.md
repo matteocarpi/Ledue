@@ -7,7 +7,7 @@ indirizzi_mail:
 numeri_di_telefono:
 - numero: ''
 instagram: https://www.instagram.com/ledue_handbags/
-facebook: https://www.facebook.com/L%C4%92DUE-106346091148913
+facebook: https://https://www.facebook.com/leduehandbags/
 shopify: https://www.ledue-factory.myshopify.com
 
 ---
