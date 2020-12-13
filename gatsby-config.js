@@ -21,7 +21,7 @@ module.exports = {
               maxWidth: 1024,
               linkImagesToOriginal: false,
               backgroundColor: 'transparent',
-              plugins: ['gatsby-remark-images-anywhere'],
+              // plugins: ['gatsby-remark-images-anywhere'],
             },
           },
           '@forestryio/gatsby-remark-normalize-paths',
