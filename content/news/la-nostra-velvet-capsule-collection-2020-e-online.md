@@ -1,8 +1,8 @@
 ---
 title: La Velvet Capsule Collection 2020 è online!
 foto: "/content/images/img_5468.jpg"
-content: "<p>Finalmente il nostro shop è pronto, ci trovate le nostre borse pensate
-  per questo inverno.<br>Sogniamo di gironzolare in un cinema e guardare un film in
-  bianco e nero sul grande schermo, scaldate dalla delicatezza del velluto e dai suoi
-  colori accesi.</p>"
+content: <p>Visita lo shop per scoprire la nostra Capsule Collection pensata per questo
+  inverno. Lasciati scaldare dalla morbidezza del velluto e dai suoi colori accesi.</p><p><img
+  src="/content/images/img_4961-copy.jpg"></p>
+
 ---
