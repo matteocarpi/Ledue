@@ -14,5 +14,4 @@ fields:
   label: Foto
   description: La foto d'anteprima
 pages:
-- content/news/fake-post.md
 - content/news/la-nostra-velvet-capsule-collection-2020-e-online.md
