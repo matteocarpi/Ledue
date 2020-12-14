@@ -12,6 +12,7 @@ module.exports = {
       options: {
         plugins: [
           'gatsby-remark-normalize-paths',
+          'gatsby-remark-images-anywhere',
           {
             resolve: 'gatsby-remark-images',
             options: {
@@ -21,7 +22,6 @@ module.exports = {
               maxWidth: 1024,
               linkImagesToOriginal: false,
               backgroundColor: 'transparent',
-              // plugins: ['gatsby-remark-images-anywhere'],
             },
           },
           '@forestryio/gatsby-remark-normalize-paths',
@@ -99,7 +99,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
-        endpoint: 'https://leduefactory.us7.list-manage.com/subscribe/post?u=1ffadef495fecbc67a8818ffc&amp;id=89d3259e8b',
+        endpoint:
+          'https://leduefactory.us7.list-manage.com/subscribe/post?u=1ffadef495fecbc67a8818ffc&amp;id=89d3259e8b',
         timeout: 3500,
       },
     },
