@@ -12,7 +12,14 @@ module.exports = {
       options: {
         plugins: [
           'gatsby-remark-normalize-paths',
-          'gatsby-remark-images-anywhere',
+          '@forestryio/gatsby-remark-normalize-paths',
+          'gatsby-remark-copy-linked-files',
+          {
+            resolve: 'gatsby-remark-images-anywhere',
+            options: {
+              staticDir: 'static',
+            },
+          },
           {
             resolve: 'gatsby-remark-images',
             options: {
@@ -24,8 +31,6 @@ module.exports = {
               backgroundColor: 'transparent',
             },
           },
-          '@forestryio/gatsby-remark-normalize-paths',
-          'gatsby-remark-copy-linked-files',
         ],
       },
     },
