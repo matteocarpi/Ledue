@@ -64,9 +64,9 @@ const Home = () => {
               fields {
                 slug
               }
+              excerpt(pruneLength: 200)
               frontmatter {
                 title
-                content
                 foto {
                   childImageSharp {
                     fluid {

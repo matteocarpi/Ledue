@@ -16,17 +16,6 @@ const NewsPreview = ({ news }) => {
 
   const currentNews = news[index].node.childMarkdownRemark;
 
-  const renderExcerpt = () => {
-    const { content } = currentNews.frontmatter;
-
-    if (content.length > 200) {
-      const excerpt = content.substring(0, 200);
-      return excerpt;
-    }
-
-    return content;
-  };
-
   return (
     <>
       <BackgroundImage
@@ -55,8 +44,9 @@ const NewsPreview = ({ news }) => {
           <p
             className={styles.excerpt}
             // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{ __html: renderExcerpt() }}
-          />
+          >
+            {currentNews.excerpt}
+          </p>
         </div>
 
         <div className={styles.selector}>
