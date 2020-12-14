@@ -20,7 +20,7 @@ fields:
     required: false
     wysiwyg: true
     schema:
-      format: html-blocks
+      format: markdown
   label: Content
 pages:
 - content/news/la-nostra-velvet-capsule-collection-2020-e-online.md
