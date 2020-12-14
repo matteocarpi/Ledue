@@ -13,14 +13,5 @@ fields:
     maxSize: 64
   label: Foto
   description: La foto d'anteprima
-- name: content
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: true
-    schema:
-      format: markdown
-  label: Content
 pages:
 - content/news/la-nostra-velvet-capsule-collection-2020-e-online.md
