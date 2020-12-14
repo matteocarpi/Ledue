@@ -12,12 +12,23 @@ module.exports = {
       options: {
         plugins: [
           'gatsby-remark-normalize-paths',
-          '@forestryio/gatsby-remark-normalize-paths',
-          'gatsby-remark-copy-linked-files',
           {
             resolve: 'gatsby-remark-images-anywhere',
             options: {
-              staticDir: 'static',
+              staticDir: 'content',
+              createMarkup: ({
+                src,
+                srcSet,
+                sizes,
+                aspectRatio,
+                alt,
+                base64,
+                presentationWidth,
+              }) =>
+                `<custom-image src="${src}" srcset="${srcSet}" sizes="${sizes}" aspectratio="${aspectRatio}" alt="${alt}" base64="${base64}" presentationwidth="${presentationWidth}"></custom-image>`,
+              sharpMethod: 'fluid',
+              // Additional sharp image arguments: https://www.gatsbyjs.org/packages/gatsby-plugin-sharp/
+              // maxWidth: 650,
             },
           },
           {
@@ -31,6 +42,8 @@ module.exports = {
               backgroundColor: 'transparent',
             },
           },
+          '@forestryio/gatsby-remark-normalize-paths',
+          'gatsby-remark-copy-linked-files',
         ],
       },
     },

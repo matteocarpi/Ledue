@@ -3,11 +3,18 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import BackgroundImage from 'gatsby-background-image';
 import cx from 'classnames';
+import RehypeReact from 'rehype-react';
 
+import CustomImage from '../components/CustomImage';
 import Layout from '../components/layout';
 import ArrowLink from '../components/arrow-link';
 
 import styles from './Post.module.scss';
+
+const renderAst = new RehypeReact({
+  createElement: React.createElement,
+  components: { 'custom-image': CustomImage },
+}).Compiler;
 
 const Post = ({ data }) => (
   <Layout>
@@ -21,12 +28,10 @@ const Post = ({ data }) => (
           {data.postData.frontmatter.title}
         </h2>
       </BackgroundImage>
-      <div
-        className={styles.content}
-        // eslint-disable-next-line react/no-danger
-        dangerouslySetInnerHTML={{ __html: data.postData.frontmatter.content }}
-      />
 
+      <div className={styles.content}>{renderAst(data.postData.htmlAst)}</div>
+      
+      <div />
       <div className={styles.other_posts_wrapper}>
         <div className={styles.other_posts}>
           {data.otherPosts.edges.map((p) => (
@@ -62,6 +67,7 @@ export const query = graphql`
         }
         content
       }
+      htmlAst
     }
     otherPosts: allFile(
       filter: {
