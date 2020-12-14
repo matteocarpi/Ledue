@@ -30,7 +30,7 @@ const Post = ({ data }) => (
       </BackgroundImage>
 
       <div className={styles.content}>{renderAst(data.postData.htmlAst)}</div>
-      
+
       <div />
       <div className={styles.other_posts_wrapper}>
         <div className={styles.other_posts}>
@@ -65,7 +65,6 @@ export const query = graphql`
             }
           }
         }
-        content
       }
       htmlAst
     }
