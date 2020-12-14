@@ -27,15 +27,20 @@ const Collection = ({ data }) => {
         <div
           className={styles.sottotitolo}
           // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{ __html: data.collectionData.frontmatter.sottotitolo }}
+          dangerouslySetInnerHTML={{
+            __html: data.collectionData.frontmatter.sottotitolo,
+          }}
         />
 
-        <ArrowLink kind="internal" className={styles.shop_link} link="#">shop</ArrowLink>
-
+        <ArrowLink
+          className={styles.shop_link}
+          link={data.collectionData.frontmatter.link_allo_shop}
+        >
+          shop
+        </ArrowLink>
       </BackgroundImage>
 
       <div className={styles.galleria}>
-
         {galleria.map((foto, index) => {
           const posizione = index % 4;
 
@@ -62,9 +67,7 @@ const Collection = ({ data }) => {
             />
           );
         })}
-
       </div>
-
     </Layout>
   );
 };
@@ -72,30 +75,30 @@ const Collection = ({ data }) => {
 export default Collection;
 
 export const query = graphql`
-query CollectionData($slug: String!) {
-  collectionData: markdownRemark(fields: {slug: {eq: $slug}}) {
-    frontmatter {
-      title
-      sottotitolo
-      link_allo_shop
-      foto {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
+  query CollectionData($slug: String!) {
+    collectionData: markdownRemark(fields: { slug: { eq: $slug } }) {
+      frontmatter {
+        title
+        sottotitolo
+        link_allo_shop
+        foto {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
           }
         }
-      }
-      galleria {
-        childImageSharp {
-          fluid {
-            aspectRatio
-            ...GatsbyImageSharpFluid
+        galleria {
+          childImageSharp {
+            fluid {
+              aspectRatio
+              ...GatsbyImageSharpFluid
+            }
           }
         }
       }
     }
   }
-}
 `;
 
 Collection.propTypes = {

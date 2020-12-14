@@ -8,9 +8,7 @@ import ArrowBlack from '../../../content/svg/right_arrow_black.svg';
 
 import styles from './ArrowLink.module.scss';
 
-const ArrowLink = ({
-  kind, link, children, color, className,
-}) => {
+const ArrowLink = ({ kind, link, children, color, className }) => {
   const renderArrow = (arrowColor) => {
     if (arrowColor === 'pink') return <ArrowPink className={styles.arrow} />;
     return <ArrowBlack className={styles.arrow} />;
@@ -18,20 +16,24 @@ const ArrowLink = ({
 
   if (kind === 'internal') {
     return (
-      <Link className={cx(styles.container, styles[color], className)} to={link}>
+      <Link
+        className={cx(styles.container, styles[color], className)}
+        to={link}
+      >
         {renderArrow(color)}
-        <span>
-          {children}
-        </span>
+        <span>{children}</span>
       </Link>
     );
   }
   return (
-    <a className={cx(styles.container, styles[color], className)} href={link}>
+    <a
+      className={cx(styles.container, styles[color], className)}
+      href={link}
+      target="_blank"
+      rel="noreferrer"
+    >
       {renderArrow(color)}
-      <span className={styles.content}>
-        {children}
-      </span>
+      <span className={styles.content}>{children}</span>
     </a>
   );
 };
