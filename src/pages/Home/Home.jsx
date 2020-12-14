@@ -14,13 +14,60 @@ import Newsletter from '../../components/newsletter';
 const Home = () => {
   const data = useStaticQuery(graphql`
     query HomeQuery {
-        slider: markdownRemark(frontmatter: {title: {eq: "Home"}}) {
+      slider: markdownRemark(frontmatter: { title: { eq: "Home" } }) {
+        frontmatter {
+          welcome_text
+          slider {
+            colore_del_logo
+            foto {
+              id
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+      collection: allMarkdownRemark(
+        filter: { frontmatter: { doctype: { eq: "collection" } } }
+        sort: { fields: frontmatter___date, order: DESC }
+        limit: 1
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+            }
             frontmatter {
-              welcome_text
-              slider {
-                colore_del_logo
-                foto {
+              title
+              galleria {
+                childImageSharp {
+                  fluid {
+                    aspectRatio
+                    ...GatsbyImageSharpFluid
+                  }
                   id
+                }
+              }
+              link_allo_shop
+            }
+          }
+        }
+      }
+      news: allFile(filter: { relativeDirectory: { eq: "news" } }) {
+        edges {
+          node {
+            id
+            childMarkdownRemark {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+                content
+                foto {
                   childImageSharp {
                     fluid {
                       ...GatsbyImageSharpFluid
@@ -30,59 +77,15 @@ const Home = () => {
               }
             }
           }
-          collection: allMarkdownRemark(filter: {frontmatter: {doctype: {eq: "collection"}}}, sort: {fields: frontmatter___date, order: DESC}, limit: 1) {
-            edges {
-              node {
-                fields {
-                  slug
-                }
-                frontmatter {
-                  title
-                  galleria {
-                    childImageSharp {
-                      fluid {
-                        aspectRatio
-                        ...GatsbyImageSharpFluid
-                      }
-                      id
-                    }
-                  }
-                  link_allo_shop
-                }
-              }
-            }
-          }
-          news: allFile(filter:{relativeDirectory: {eq: "news"}}) {
-              edges {
-                node {
-                  id
-                  childMarkdownRemark {
-                    fields {
-                      slug
-                    }
-                    frontmatter {
-                      title
-                      foto {
-                        childImageSharp {
-                          fluid {
-                            ...GatsbyImageSharpFluid
-                          }
-                        }
-                      }
-                    }
-                    excerpt (pruneLength: 200)
-                  }
-                }
-              }
-            }
-          
-    }`);
+        }
+      }
+    }
+  `);
 
   const collectionData = data.collection.edges[0].node;
   const newsData = data.news.edges;
 
   return (
-
     <Layout isHome>
       <SEO title="Home" />
       <Slider slides={data.slider.frontmatter.slider} />
@@ -90,7 +93,7 @@ const Home = () => {
       <main className={styles.content}>
         <div
           className={styles.welcome_text}
-            // eslint-disable-next-line react/no-danger
+          // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{
             __html: data.slider.frontmatter.welcome_text,
           }}
