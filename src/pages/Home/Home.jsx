@@ -22,7 +22,7 @@ const Home = () => {
             foto {
               id
               childImageSharp {
-                fluid {
+                fluid(maxWidth: 1920) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -44,7 +44,7 @@ const Home = () => {
               title
               galleria {
                 childImageSharp {
-                  fluid {
+                  fluid(maxWidth: 1024) {
                     aspectRatio
                     ...GatsbyImageSharpFluid
                   }
@@ -69,7 +69,7 @@ const Home = () => {
                 title
                 foto {
                   childImageSharp {
-                    fluid {
+                    fluid(maxWidth: 1024) {
                       ...GatsbyImageSharpFluid
                     }
                   }

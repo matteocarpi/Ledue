@@ -9,23 +9,24 @@ import styles from './NewsPage.module.scss';
 
 const NewsPage = () => {
   const data = useStaticQuery(graphql`
-  {
-    allFile(filter: {relativeDirectory: {eq: "news"}}) {
-      edges {
-        node {
-          id
-          childMarkdownRemark {
-            fields {
-              slug
-            }
-            html
-            excerpt (format: HTML, pruneLength: 200)
-            frontmatter {
-              title
-              foto {
-                childImageSharp {
-                  fluid {
-                    ...GatsbyImageSharpFluid
+    {
+      allFile(filter: { relativeDirectory: { eq: "news" } }) {
+        edges {
+          node {
+            id
+            childMarkdownRemark {
+              fields {
+                slug
+              }
+              html
+              excerpt(format: HTML, pruneLength: 200)
+              frontmatter {
+                title
+                foto {
+                  childImageSharp {
+                    fluid(maxWidth: 1024) {
+                      ...GatsbyImageSharpFluid
+                    }
                   }
                 }
               }
@@ -33,20 +34,19 @@ const NewsPage = () => {
           }
         }
       }
-    }
-      pageInfo: markdownRemark(frontmatter: {title: {eq: "News"}}) {
+      pageInfo: markdownRemark(frontmatter: { title: { eq: "News" } }) {
         frontmatter {
           title
           foto {
             childImageSharp {
-              fluid {
+              fluid(maxWidth: 1920) {
                 ...GatsbyImageSharpFluid
               }
             }
           }
         }
       }
-}
+    }
   `);
 
   const news = data.allFile.edges;
@@ -67,12 +67,16 @@ const NewsPage = () => {
         return (
           <div
             key={article.id}
-            className={cx(styles.article_container, isRightPicture && styles.right)}
+            className={cx(
+              styles.article_container,
+              isRightPicture && styles.right
+            )}
           >
             <Img
               className={cx(styles.article_foto, styles.mobile)}
               fluid={{
-                ...article.childMarkdownRemark.frontmatter.foto.childImageSharp.fluid,
+                ...article.childMarkdownRemark.frontmatter.foto.childImageSharp
+                  .fluid,
                 aspectRatio: 3 / 4,
               }}
             />
@@ -80,31 +84,35 @@ const NewsPage = () => {
             <Img
               className={cx(styles.article_foto, styles.desktop)}
               fluid={{
-                ...article.childMarkdownRemark.frontmatter.foto.childImageSharp.fluid,
+                ...article.childMarkdownRemark.frontmatter.foto.childImageSharp
+                  .fluid,
                 aspectRatio: 122 / 100,
               }}
             />
 
             <div className={styles.article_preview}>
-              <Link className={styles.article_title} to={article.childMarkdownRemark.fields.slug}>
-                <h2>
-                  {article.childMarkdownRemark.frontmatter.title}
-                </h2>
+              <Link
+                className={styles.article_title}
+                to={article.childMarkdownRemark.fields.slug}
+              >
+                <h2>{article.childMarkdownRemark.frontmatter.title}</h2>
               </Link>
               <p>
                 <p
-            // eslint-disable-next-line react/no-danger
-                  dangerouslySetInnerHTML={{ __html: article.childMarkdownRemark.excerpt }}
+                  // eslint-disable-next-line react/no-danger
+                  dangerouslySetInnerHTML={{
+                    __html: article.childMarkdownRemark.excerpt,
+                  }}
                 />
-                <Link to={article.childMarkdownRemark.fields.slug}>Leggi di più</Link>
+                <Link to={article.childMarkdownRemark.fields.slug}>
+                  Leggi di più
+                </Link>
               </p>
             </div>
-
           </div>
         );
       })}
     </Layout>
-
   );
 };
 
