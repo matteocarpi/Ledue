@@ -28,7 +28,7 @@ module.exports = {
                 `<custom-image src="${src}" srcset="${srcSet}" sizes="${sizes}" aspectratio="${aspectRatio}" alt="${alt}" base64="${base64}" presentationwidth="${presentationWidth}"></custom-image>`,
               sharpMethod: 'fluid',
               // Additional sharp image arguments: https://www.gatsbyjs.org/packages/gatsby-plugin-sharp/
-              // maxWidth: 650,
+              // jpegQuality: 100, quality: 100, maxWidth: 650,
             },
           },
           {
@@ -37,6 +37,7 @@ module.exports = {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
+              quality: 100,
               maxWidth: 1920,
               linkImagesToOriginal: false,
               backgroundColor: 'transparent',

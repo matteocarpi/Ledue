@@ -24,7 +24,7 @@ const NewsPage = () => {
                 title
                 foto {
                   childImageSharp {
-                    fluid(maxWidth: 1024) {
+                    fluid(jpegQuality: 100, quality: 100, maxWidth: 1024) {
                       ...GatsbyImageSharpFluid
                     }
                   }
@@ -39,7 +39,7 @@ const NewsPage = () => {
           title
           foto {
             childImageSharp {
-              fluid(maxWidth: 1920) {
+              fluid(jpegQuality: 100, quality: 100, maxWidth: 1920) {
                 ...GatsbyImageSharpFluid
               }
             }

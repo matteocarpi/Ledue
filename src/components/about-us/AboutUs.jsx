@@ -8,40 +8,42 @@ import styles from './AboutUs.module.scss';
 const AboutUs = () => {
   const data = useStaticQuery(graphql`
     {
-        about: markdownRemark(frontmatter: {title: {eq: "Home"}}) {
-            frontmatter {
-                about_us {
-                    biografia
-                    foto {
-                        childImageSharp {
-                            fluid(maxWidth: 1024) {
-                                ...GatsbyImageSharpFluid
-                            }
-                        }
-                    }
+      about: markdownRemark(frontmatter: { title: { eq: "Home" } }) {
+        frontmatter {
+          about_us {
+            biografia
+            foto {
+              childImageSharp {
+                fluid(jpegQuality: 100, quality: 100, maxWidth: 1024) {
+                  ...GatsbyImageSharpFluid
                 }
-            }
-        }
-        contacts: markdownRemark(frontmatter: {title: {eq: "Impostazioni"}}) {
-            frontmatter {
-                instagram
-                indirizzi_mail {
-                    indirizzo
-                }
-                # numeri_di_telefono {
-                #     numero
-                # }
+              }
             }
           }
+        }
+      }
+      contacts: markdownRemark(frontmatter: { title: { eq: "Impostazioni" } }) {
+        frontmatter {
+          instagram
+          indirizzi_mail {
+            indirizzo
+          }
+          # numeri_di_telefono {
+          #     numero
+          # }
+        }
+      }
     }
-    `);
+  `);
 
   const aboutData = data.about.frontmatter.about_us;
   const contactsData = data.contacts.frontmatter;
 
   return (
     <div id="about" className={styles.container}>
-      <h1 className={cx('giant', 'black', styles.mobile, styles.title)}>About us</h1>
+      <h1 className={cx('giant', 'black', styles.mobile, styles.title)}>
+        About us
+      </h1>
       <Img
         className={styles.image}
         fluid={aboutData?.foto.childImageSharp.fluid}
@@ -49,30 +51,26 @@ const AboutUs = () => {
       <div className={styles.content}>
         <h1 className={cx('giant', 'black', styles.desktop)}>About us</h1>
         <div
-      // eslint-disable-next-line react/no-danger
+          // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: aboutData.biografia }}
           className={styles.biografia}
         />
 
         <div id="contacts" className={styles.contacts}>
           {contactsData.indirizzi_mail.map((mail) => (
-            <a
-              key={mail.indirizzo}
-              href={`mailto:${mail.indirizzo}`}
-            >
+            <a key={mail.indirizzo} href={`mailto:${mail.indirizzo}`}>
               {mail.indirizzo}
             </a>
           ))}
           {contactsData.numeri_di_telefono?.map((tel) => (
-            <a
-              key={tel.numero}
-              href={`tel:${tel.numero}`}
-            >
+            <a key={tel.numero} href={`tel:${tel.numero}`}>
               {tel.numero}
             </a>
           ))}
 
-          <a key={contactsData.instagram} href={contactsData.instagram}>@ledue_handbags</a>
+          <a key={contactsData.instagram} href={contactsData.instagram}>
+            @ledue_handbags
+          </a>
         </div>
       </div>
     </div>
