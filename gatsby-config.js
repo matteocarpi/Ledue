@@ -28,7 +28,7 @@ module.exports = {
                 `<custom-image src="${src}" srcset="${srcSet}" sizes="${sizes}" aspectratio="${aspectRatio}" alt="${alt}" base64="${base64}" presentationwidth="${presentationWidth}"></custom-image>`,
               sharpMethod: 'fluid',
               // Additional sharp image arguments: https://www.gatsbyjs.org/packages/gatsby-plugin-sharp/
-              // jpegQuality: 100, quality: 100, maxWidth: 650,
+              // jpegQuality: 70, quality: 70, maxWidth: 650,
             },
           },
           {
