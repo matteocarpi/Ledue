@@ -11,6 +11,7 @@ galleria:
 - "/content/images/img_4832.jpg"
 - "/content/images/img_4757.jpg"
 - "/content/images/img_4994.jpg"
+- "/content/images/cccc.jpg"
 - "/content/images/img_5014.jpg"
 - "/content/images/img_4749.jpg"
 - "/content/images/img_4942.jpg"
