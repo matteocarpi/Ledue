@@ -14,6 +14,8 @@ galleria:
 - "/content/images/img_5014.jpg"
 - "/content/images/img_4749.jpg"
 - "/content/images/img_4942.jpg"
+- "/content/images/img_4951.jpg"
+- "/content/images/img_4993.jpg"
 - "/content/images/img_4915.jpg"
 sottotitolo: "<p></p>"
 date: 2020-11-26T23:00:00.000+00:00
