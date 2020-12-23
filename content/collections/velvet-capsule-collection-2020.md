@@ -1,6 +1,6 @@
 ---
 title: Velvet Capsule Collection 2020
-link_allo_shop: https://ledue-factory.myshopify.com
+link_allo_shop: https://ledue-factory.myshopify.com/collections/velvet-capsule-collection-2020
 foto: "/content/images/img_4798.jpg"
 galleria:
 - "/content/images/img_4986-copy.jpg"
