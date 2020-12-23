@@ -8,6 +8,6 @@ numeri_di_telefono:
 - numero: ''
 instagram: https://www.instagram.com/ledue_handbags/
 facebook: https://www.facebook.com/leduehandbags/
-shopify: https://ledue-factory.myshopify.com
+shopify: https://ledue-factory.myshopify.com/collections/velvet-capsule-collection-2020
 
 ---
