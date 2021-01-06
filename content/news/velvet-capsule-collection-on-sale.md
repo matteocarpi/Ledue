@@ -3,4 +3,4 @@ title: Velvet Capsule Collection on sale!
 foto: "/content/images/b.jpg"
 
 ---
-Inizia il nuovo anno con una borsa Lēdue. Nel nostro shop sono arrivati i saldi ❤
+Inizia il nuovo anno con una borsa Lēdue. Nel nostro [shop](https://ledue-factory.myshopify.com/collections/velvet-capsule-collection-2020) sono arrivati i saldi ❤
