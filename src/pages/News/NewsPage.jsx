@@ -10,23 +10,24 @@ import styles from './NewsPage.module.scss';
 const NewsPage = () => {
   const data = useStaticQuery(graphql`
     {
-      allFile(filter: { relativeDirectory: { eq: "news" } }) {
+      posts: allMarkdownRemark(
+        filter: { frontmatter: { doctype: { eq: "news" } } }
+        sort: { fields: frontmatter___data, order: DESC }
+      ) {
         edges {
           node {
             id
-            childMarkdownRemark {
-              fields {
-                slug
-              }
-              html
-              excerpt(format: HTML, pruneLength: 200)
-              frontmatter {
-                title
-                foto {
-                  childImageSharp {
-                    fluid(jpegQuality: 70, quality: 70, maxWidth: 1024) {
-                      ...GatsbyImageSharpFluid
-                    }
+            fields {
+              slug
+            }
+            html
+            excerpt(format: HTML, pruneLength: 200)
+            frontmatter {
+              title
+              foto {
+                childImageSharp {
+                  fluid(jpegQuality: 70, quality: 70, maxWidth: 1024) {
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }
@@ -49,7 +50,7 @@ const NewsPage = () => {
     }
   `);
 
-  const news = data.allFile.edges;
+  const news = data.posts.edges;
 
   return (
     <Layout className={styles.container}>
@@ -75,8 +76,7 @@ const NewsPage = () => {
             <Img
               className={cx(styles.article_foto, styles.mobile)}
               fluid={{
-                ...article.childMarkdownRemark.frontmatter.foto.childImageSharp
-                  .fluid,
+                ...article.frontmatter.foto.childImageSharp.fluid,
                 aspectRatio: 3 / 4,
               }}
             />
@@ -84,29 +84,23 @@ const NewsPage = () => {
             <Img
               className={cx(styles.article_foto, styles.desktop)}
               fluid={{
-                ...article.childMarkdownRemark.frontmatter.foto.childImageSharp
-                  .fluid,
+                ...article.frontmatter.foto.childImageSharp.fluid,
                 aspectRatio: 122 / 100,
               }}
             />
 
             <div className={styles.article_preview}>
-              <Link
-                className={styles.article_title}
-                to={article.childMarkdownRemark.fields.slug}
-              >
-                <h2>{article.childMarkdownRemark.frontmatter.title}</h2>
+              <Link className={styles.article_title} to={article.fields.slug}>
+                <h2>{article.frontmatter.title}</h2>
               </Link>
               <p>
                 <p
                   // eslint-disable-next-line react/no-danger
                   dangerouslySetInnerHTML={{
-                    __html: article.childMarkdownRemark.excerpt,
+                    __html: article.excerpt,
                   }}
                 />
-                <Link to={article.childMarkdownRemark.fields.slug}>
-                  Leggi di più
-                </Link>
+                <Link to={article.fields.slug}>Leggi di più</Link>
               </p>
             </div>
           </div>
