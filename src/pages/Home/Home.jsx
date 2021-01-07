@@ -56,22 +56,24 @@ const Home = () => {
           }
         }
       }
-      news: allFile(filter: { relativeDirectory: { eq: "news" } }) {
+      news: allMarkdownRemark(
+        filter: { frontmatter: { doctype: { eq: "news" } } }
+        sort: { fields: frontmatter___data, order: DESC }
+        limit: 10
+      ) {
         edges {
           node {
             id
-            childMarkdownRemark {
-              fields {
-                slug
-              }
-              excerpt(pruneLength: 200)
-              frontmatter {
-                title
-                foto {
-                  childImageSharp {
-                    fluid(jpegQuality: 70, quality: 70, maxWidth: 1024) {
-                      ...GatsbyImageSharpFluid
-                    }
+            fields {
+              slug
+            }
+            excerpt(pruneLength: 200)
+            frontmatter {
+              title
+              foto {
+                childImageSharp {
+                  fluid(jpegQuality: 70, quality: 70, maxWidth: 1024) {
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }

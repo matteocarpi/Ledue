@@ -14,7 +14,7 @@ import styles from './NewsPreview.module.scss';
 const NewsPreview = ({ news }) => {
   const [index, setIndex] = useState(0);
 
-  const currentNews = news[index].node.childMarkdownRemark;
+  const currentNews = news[index].node;
 
   return (
     <>
