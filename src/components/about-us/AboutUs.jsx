@@ -14,7 +14,7 @@ const AboutUs = () => {
             biografia
             foto {
               childImageSharp {
-                fluid(jpegQuality: 70, quality: 70, maxWidth: 1024) {
+                fluid(jpegQuality: 50, quality: 50, maxWidth: 1024) {
                   ...GatsbyImageSharpFluid
                 }
               }

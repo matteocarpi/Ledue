@@ -83,14 +83,14 @@ export const query = graphql`
         link_allo_shop
         foto {
           childImageSharp {
-            fluid(jpegQuality: 70, quality: 70, maxWidth: 1920) {
+            fluid(jpegQuality: 50, quality: 50, maxWidth: 1920) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         galleria {
           childImageSharp {
-            fluid(jpegQuality: 70, quality: 70, maxWidth: 1920) {
+            fluid(jpegQuality: 50, quality: 50, maxWidth: 1920) {
               aspectRatio
               ...GatsbyImageSharpFluid
             }

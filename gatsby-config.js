@@ -2,7 +2,8 @@
 module.exports = {
   siteMetadata: {
     title: 'LEDUE',
-    description: 'Artisanal Handbags',
+    description:
+      "Lēdue Handbags è un progetto tutto al femminile, creato da due amiche cresciute tra abiti sartoriali, artigianalità e creatività. Con alle spalle una laurea in architettura e giurisprudenza, abbiamo lavorato in vari mondi ⁠– scenografia e moda, editoria e diritto d'autore ⁠– e seguito corsi di sartoria professionale. Un insieme di esperienze che si sono unite alla nostra passione per gli accessori e al desiderio di sperimentare nuove forme espressive. L'inizio di questa storia è il 2020, anno pieno di cambiamenti e tempo sospeso. Ci siamo rifugiate in un nostro sogno, facendo ricerca, studiando i materiali, progettando prototipi. Da questo sogno nascono le borse Lēdue.",
     author: '@matteocarpi',
   },
   plugins: [
@@ -28,7 +29,7 @@ module.exports = {
                 `<custom-image src="${src}" srcset="${srcSet}" sizes="${sizes}" aspectratio="${aspectRatio}" alt="${alt}" base64="${base64}" presentationwidth="${presentationWidth}"></custom-image>`,
               sharpMethod: 'fluid',
               // Additional sharp image arguments: https://www.gatsbyjs.org/packages/gatsby-plugin-sharp/
-              // jpegQuality: 70, quality: 70, maxWidth: 650,
+              // jpegQuality: 50, quality: 50, maxWidth: 650,
             },
           },
           {
