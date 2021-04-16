@@ -1,4 +1,8 @@
 // eslint-disable-next-line no-undef
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: 'LEDUE',
@@ -113,9 +117,8 @@ module.exports = {
       resolve: 'gatsby-source-instagram',
       options: {
         username: '31044158025',
-        access_token:
-          'EAACzwiH9T0gBAOeAmKaraBXcyJ4PHOjL2Bx9lNbZCdIKGZAryWPbfWHlWvXOy3WkQJZBJ9IpBndZA1FevZAaEF5ifw9QFFMvElD4onjOGVdlVbWjgKo6jbUUkISSXCZBZBTtBW1Gx0ZCN3eHYSZCX6S7olZAeBrqLqGT0GZCQpX4NKtYwZDZD',
-        instagram_id: '17841431140760519',
+        access_token: process.env.IG_ACCESS_TOKEN,
+        instagram_id: process.env.IG_ID,
       },
     },
     {
