@@ -3,6 +3,8 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
+console.log({ at: process.env.IG_ACCESS_TOKEN, id: process.env.IG_ID });
+
 module.exports = {
   siteMetadata: {
     title: 'LEDUE',
