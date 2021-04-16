@@ -1,4 +1,8 @@
 // eslint-disable-next-line no-undef
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: 'LEDUE',
@@ -114,6 +118,8 @@ module.exports = {
       resolve: 'gatsby-source-instagram',
       options: {
         username: '31044158025',
+        access_token: process.env.IG_ACCESS_TOKEN,
+        instagram_id: process.env.IG_ID,
       },
     },
     {
