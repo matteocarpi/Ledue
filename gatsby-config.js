@@ -113,6 +113,9 @@ module.exports = {
       resolve: 'gatsby-source-instagram',
       options: {
         username: '31044158025',
+        access_token:
+          'EAACzwiH9T0gBAOeAmKaraBXcyJ4PHOjL2Bx9lNbZCdIKGZAryWPbfWHlWvXOy3WkQJZBJ9IpBndZA1FevZAaEF5ifw9QFFMvElD4onjOGVdlVbWjgKo6jbUUkISSXCZBZBTtBW1Gx0ZCN3eHYSZCX6S7olZAeBrqLqGT0GZCQpX4NKtYwZDZD',
+        instagram_id: '17841431140760519',
       },
     },
     {
