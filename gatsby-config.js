@@ -1,11 +1,12 @@
-/* globals IG_ACCESS_TOKEN, IG_ID */
-
 // eslint-disable-next-line no-undef
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
-console.log({ at: IG_ACCESS_TOKEN, id: IG_ID });
+console.log({
+  at: process.env.IG_ACCESS_TOKEN,
+  id: process.env.IG_ID,
+});
 
 module.exports = {
   siteMetadata: {
