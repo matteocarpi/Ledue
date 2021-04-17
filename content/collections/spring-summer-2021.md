@@ -3,7 +3,7 @@ date: 2021-04-15T14:51:59.000+00:00
 doctype: collection
 title: Spring Summer 2021
 link_allo_shop: ''
-foto: "/content/images/7w7a9377.JPG"
+foto: "/content/images/7w7a8831.JPG"
 galleria:
 - "/content/images/7w7a9055.JPG"
 - "/content/images/7w7a9011.JPG"
