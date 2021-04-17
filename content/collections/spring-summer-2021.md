@@ -1,9 +1,9 @@
 ---
-date: 2021-04-15T14:51:59Z
+date: 2021-04-15T14:51:59.000+00:00
 doctype: collection
-title: Spring-Summer 2021
+title: Spring Summer 2021
 link_allo_shop: ''
-foto: "/content/images/7w7a8775.JPG"
+foto: "/content/images/7w7a9377.JPG"
 galleria:
 - "/content/images/7w7a9643.JPG"
 - "/content/images/7w7a9316.JPG"
