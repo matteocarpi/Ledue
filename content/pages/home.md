@@ -1,9 +1,7 @@
 ---
 title: Home
 slider:
-- foto: "/content/images/7w7a8589.JPG"
-  colore_del_logo: Bianco
-- foto: "/content/images/7w7a8714.JPG"
+- foto: "/content/images/7w7a8775.JPG"
   colore_del_logo: Bianco
 welcome_text: "<p>Lēdue nasce dall'incontro di due personalità diverse che confluiscono
   in un progetto, formando un nodo stretto.</p><p>Immaginiamo e creiamo borse caratterizzate
