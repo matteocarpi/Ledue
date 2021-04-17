@@ -5,6 +5,7 @@ title: Spring Summer 2021
 link_allo_shop: ''
 foto: "/content/images/7w7a9377.JPG"
 galleria:
+- "/content/images/7w7a9055.JPG"
 - "/content/images/7w7a9643.JPG"
 - "/content/images/7w7a9316.JPG"
 - "/content/images/7w7a8777.JPG"
@@ -23,7 +24,6 @@ galleria:
 - "/content/images/7w7a9539.JPG"
 - "/content/images/7w7a8626.JPG"
 - "/content/images/7w7a9377.JPG"
-- "/content/images/7w7a9055.JPG"
 - "/content/images/7w7a8552.JPG"
 - "/content/images/7w7a9011.JPG"
 sottotitolo: ''
