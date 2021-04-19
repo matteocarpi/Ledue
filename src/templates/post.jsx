@@ -22,7 +22,6 @@ const Post = ({ data }) => (
       <BackgroundImage
         className={styles.title_slide}
         fluid={data.postData.frontmatter.foto.childImageSharp.fluid}
-        style={{ backgroundPosition: 'top' }}
       >
         <h2 className={cx('fondotinta', styles.title)}>
           {data.postData.frontmatter.title}
