@@ -7,7 +7,7 @@ import cx from 'classnames';
 import LogoLight from '../../../content/svg/logo_ledue_light.svg';
 import LogoDark from '../../../content/svg/logo_ledue_dark.svg';
 
-import styles from './slider.module.scss';
+import * as styles from './slider.module.scss';
 
 const Slider = ({ slides }) => {
   const [index, setIndex] = useState(0);
@@ -55,9 +55,11 @@ const Slider = ({ slides }) => {
                 opacity,
               }}
             >
-              {slide.colore_del_logo === 'Nero'
-                ? <LogoDark className={styles.logo} />
-                : <LogoLight className={styles.logo} />}
+              {slide.colore_del_logo === 'Nero' ? (
+                <LogoDark className={styles.logo} />
+              ) : (
+                <LogoLight className={styles.logo} />
+              )}
             </motion.div>
           </BackgroundImage>
         </div>

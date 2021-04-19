@@ -9,7 +9,7 @@ import CustomImage from '../components/CustomImage';
 import Layout from '../components/layout';
 import ArrowLink from '../components/arrow-link';
 
-import styles from './Post.module.scss';
+import * as styles from './Post.module.scss';
 
 const renderAst = new RehypeReact({
   createElement: React.createElement,

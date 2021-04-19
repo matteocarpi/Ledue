@@ -6,7 +6,7 @@ import SEO from '../../components/seo';
 import Slider from '../../components/slider';
 import CollectionPreview from '../../components/collection-preview';
 import NewsPreview from '../../components/news-preview';
-import styles from './Home.module.scss';
+import * as styles from './Home.module.scss';
 import InstaFeed from '../../components/insta-feed';
 import AboutUs from '../../components/about-us';
 import Newsletter from '../../components/newsletter';

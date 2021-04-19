@@ -9,7 +9,7 @@ import Button from '../utils/button';
 import Circle from '../../../content/svg/circle.svg';
 import Outline from '../../../content/svg/outline.svg';
 
-import styles from './NewsPreview.module.scss';
+import * as styles from './NewsPreview.module.scss';
 
 const NewsPreview = ({ news }) => {
   const [index, setIndex] = useState(0);

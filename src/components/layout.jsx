@@ -10,47 +10,51 @@ import Button from './utils/button';
 import Newsletter from './newsletter';
 import CloseIcon from '../../content/svg/close.svg';
 import DesktopHeader from './desktop-header';
-import styles from './Layout.module.scss';
+import * as styles from './Layout.module.scss';
 
 const Layout = ({ className, isHome, children }) => {
   const data = useStaticQuery(graphql`
-  {
-    markdownRemark(fields: {slug: {eq: "/impostazioni_contatti/"}}) {
-      frontmatter {
-        instagram
-        facebook
-        shopify
-      }
-    }
-    allMarkdownRemark(filter: {frontmatter: {doctype: {eq: "collection"}}}, sort: {fields: frontmatter___date, order: DESC}) {
-    edges {
-      node {
-        id
-        fields {
-          slug
-        }
+    {
+      markdownRemark(fields: { slug: { eq: "/impostazioni_contatti/" } }) {
         frontmatter {
-          title
+          instagram
+          facebook
+          shopify
         }
       }
-    }
-  }
-    allFile(filter: {relativeDirectory: {eq: "collections"}}) {
-      edges {
-        node {
-          childMarkdownRemark {
+      allMarkdownRemark(
+        filter: { frontmatter: { doctype: { eq: "collection" } } }
+        sort: { fields: frontmatter___date, order: DESC }
+      ) {
+        edges {
+          node {
+            id
             fields {
               slug
             }
             frontmatter {
               title
             }
-            id
+          }
+        }
+      }
+      allFile(filter: { relativeDirectory: { eq: "collections" } }) {
+        edges {
+          node {
+            childMarkdownRemark {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
+              id
+            }
           }
         }
       }
     }
-  }`);
+  `);
 
   const [hasScrolled, setHasScrolled] = useState(false);
 
@@ -89,7 +93,8 @@ const Layout = ({ className, isHome, children }) => {
     setVisited(!visited);
   };
 
-  if (showMenu) return <MobileNavigation onClose={toggleNavigation} data={data} />;
+  if (showMenu)
+    return <MobileNavigation onClose={toggleNavigation} data={data} />;
 
   return (
     <>
@@ -124,12 +129,14 @@ const Layout = ({ className, isHome, children }) => {
             </motion.div>
           )}
 
-          {!isHome && (
-            <DesktopHeader key="normalHeader" data={data} />
-          )}
+          {!isHome && <DesktopHeader key="normalHeader" data={data} />}
         </AnimatePresence>
 
-        <MobileHeader hasScrolled={hasScrolled} isHome={isHome} onOpen={toggleNavigation} />
+        <MobileHeader
+          hasScrolled={hasScrolled}
+          isHome={isHome}
+          onOpen={toggleNavigation}
+        />
 
         {children}
       </main>

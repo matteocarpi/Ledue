@@ -5,7 +5,7 @@ import Img from 'gatsby-image';
 import cx from 'classnames';
 
 import Layout from '../../components/layout';
-import styles from './NewsPage.module.scss';
+import * as styles from './NewsPage.module.scss';
 
 const NewsPage = () => {
   const data = useStaticQuery(graphql`

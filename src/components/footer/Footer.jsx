@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
 
 import Logo from '../../../content/svg/logo_ledue_dark.svg';
-import styles from './Footer.module.scss';
+import * as styles from './Footer.module.scss';
 
 const Footer = ({ data }) => {
   const year = new Date().getFullYear();
@@ -15,11 +15,19 @@ const Footer = ({ data }) => {
       <Logo className="logo" />
 
       <div className={styles.social}>
-        <a target="_blank" rel="noreferrer" href={data.markdownRemark.frontmatter.instagram}>
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href={data.markdownRemark.frontmatter.instagram}
+        >
           <FontAwesomeIcon className={styles.icon} icon={faInstagram} />
         </a>
 
-        <a target="_blank" rel="noreferrer" href={data.markdownRemark.frontmatter.facebook}>
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href={data.markdownRemark.frontmatter.facebook}
+        >
           <FontAwesomeIcon className={styles.icon} icon={faFacebook} />
         </a>
       </div>

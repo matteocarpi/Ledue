@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { motion } from 'framer-motion';
 import addToMailChimp from 'gatsby-plugin-mailchimp';
 
-import styles from './Newsletter.module.scss';
+import * as styles from './Newsletter.module.scss';
 import Loader from '../utils/loader';
 
 const Newsletter = () => {
@@ -14,7 +14,7 @@ const Newsletter = () => {
 
   const data = useStaticQuery(graphql`
     {
-      markdownRemark(frontmatter: {title: {eq: "Home"}}) {
+      markdownRemark(frontmatter: { title: { eq: "Home" } }) {
         frontmatter {
           newsletter
           thankyou
@@ -37,7 +37,6 @@ const Newsletter = () => {
         })
         .catch(() => setError(true));
     },
-
   });
 
   return (
@@ -51,9 +50,7 @@ const Newsletter = () => {
           initial={{ x: 400, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
         >
-          <p
-            className={styles.slogan}
-          >
+          <p className={styles.slogan}>
             Ups... qualcosa è andato storto :( riprova più tardi
           </p>
         </motion.div>
@@ -64,9 +61,7 @@ const Newsletter = () => {
           initial={{ x: 400, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
         >
-          <p
-            className={styles.slogan}
-          >
+          <p className={styles.slogan}>
             {data.markdownRemark.frontmatter.thankyou}
           </p>
         </motion.div>
@@ -74,13 +69,14 @@ const Newsletter = () => {
 
       {!done && !loading && (
         <>
-          <p
-            className={styles.slogan}
-          >
+          <p className={styles.slogan}>
             {data.markdownRemark.frontmatter.newsletter}
           </p>
 
-          <form className={styles.form_container} onSubmit={formik.handleSubmit}>
+          <form
+            className={styles.form_container}
+            onSubmit={formik.handleSubmit}
+          >
             <input
               id="email"
               name="email"
@@ -91,7 +87,6 @@ const Newsletter = () => {
             />
 
             <button type="submit">Subscribe</button>
-
           </form>
         </>
       )}

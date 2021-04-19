@@ -8,7 +8,7 @@ import Img from 'gatsby-image';
 import Layout from '../components/layout';
 import ArrowLink from '../components/arrow-link';
 
-import styles from './Collection.module.scss';
+import * as styles from './Collection.module.scss';
 
 const Collection = ({ data }) => {
   const { galleria } = data.collectionData.frontmatter;

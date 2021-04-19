@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import styles from './button.module.scss';
+import * as styles from './button.module.scss';
 
 const MobileHeader = ({ onClick, children, className }) => (
-
-  <button type="button" className={cx(className, styles.button)} onClick={onClick}>
+  <button
+    type="button"
+    className={cx(className, styles.button)}
+    onClick={onClick}
+  >
     {children}
   </button>
 );

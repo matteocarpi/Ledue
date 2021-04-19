@@ -8,7 +8,7 @@ import cx from 'classnames';
 import { NavItem, SubItem } from '../utils/nav-item/NavItem';
 import Logo from '../../../content/svg/logo_ledue_dark.svg';
 
-import styles from './DesktopHeader.module.scss';
+import * as styles from './DesktopHeader.module.scss';
 
 const DesktopHeader = ({ data, isHome, fixed }) => {
   const collections = data?.allMarkdownRemark;
@@ -17,25 +17,26 @@ const DesktopHeader = ({ data, isHome, fixed }) => {
   return (
     <header
       className={cx(
-        isHome && styles.home, fixed && styles.fixed,
-        styles.desktop_header,
+        isHome && styles.home,
+        fixed && styles.fixed,
+        styles.desktop_header
       )}
     >
-
       <Link to="/">
         <Logo className={styles.logo} />
       </Link>
 
       <nav className={styles.desktop_navigation}>
         <ul className={styles.navigation_content}>
-          <NavItem
-            link="/#about"
-            kind="anchor"
-          >
+          <NavItem link="/#about" kind="anchor">
             About
           </NavItem>
 
-          <NavItem className={styles.second_level_wrapper} kind="parent" link="#">
+          <NavItem
+            className={styles.second_level_wrapper}
+            kind="parent"
+            link="#"
+          >
             Collections
             <ul className={styles.second_level}>
               {collections.edges.map((colData) => {
@@ -53,24 +54,15 @@ const DesktopHeader = ({ data, isHome, fixed }) => {
             </ul>
           </NavItem>
 
-          <NavItem
-            link="/news"
-            kind="link"
-          >
+          <NavItem link="/news" kind="link">
             News
           </NavItem>
 
-          <NavItem
-            link="/#contacts"
-            kind="anchor"
-          >
+          <NavItem link="/#contacts" kind="anchor">
             Contacts
           </NavItem>
 
-          <NavItem
-            link={social.shopify}
-            kind="external"
-          >
+          <NavItem link={social.shopify} kind="external">
             Shop
           </NavItem>
 
@@ -81,7 +73,6 @@ const DesktopHeader = ({ data, isHome, fixed }) => {
           <NavItem link={social.facebook} kind="external">
             <FontAwesomeIcon className={styles.insta} icon={faFacebook} />
           </NavItem>
-
         </ul>
       </nav>
     </header>

@@ -3,7 +3,7 @@ import Img from 'gatsby-image';
 import { useStaticQuery, graphql } from 'gatsby';
 import cx from 'classnames';
 
-import styles from './AboutUs.module.scss';
+import * as styles from './AboutUs.module.scss';
 
 const AboutUs = () => {
   const data = useStaticQuery(graphql`

@@ -6,7 +6,7 @@ import cx from 'classnames';
 import ArrowPink from '../../../content/svg/right_arrow_pink.svg';
 import ArrowBlack from '../../../content/svg/right_arrow_black.svg';
 
-import styles from './ArrowLink.module.scss';
+import * as styles from './ArrowLink.module.scss';
 
 const ArrowLink = ({ kind, link, children, color, className }) => {
   const renderArrow = (arrowColor) => {

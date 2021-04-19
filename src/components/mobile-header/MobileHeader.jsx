@@ -7,13 +7,15 @@ import Button from '../utils/button/Button';
 import Burger from '../../../content/svg/burger.svg';
 import Logo from '../../../content/svg/logo_ledue_dark.svg';
 
-import styles from './MobileHeader.module.scss';
+import * as styles from './MobileHeader.module.scss';
 
 const MobileHeader = ({ isHome, onOpen, hasScrolled }) => (
   <header
-    className={
-        cx(styles.container, isHome && !hasScrolled && styles.home, hasScrolled && styles.fixed)
-        }
+    className={cx(
+      styles.container,
+      isHome && !hasScrolled && styles.home,
+      hasScrolled && styles.fixed
+    )}
   >
     <div className={styles.burger}>
       <Button onClick={onOpen}>
