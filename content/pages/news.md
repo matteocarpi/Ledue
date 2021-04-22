@@ -1,5 +1,5 @@
 ---
 title: News
-foto: "/content/images/interno_sacca.jpg"
+foto: "/content/images/7w7a8714.JPG"
 
 ---
