@@ -5,7 +5,7 @@ name: default
 
 steps:
   - name: Override
-    image: node
+    image: node:12
     environment:
       DRONE_AUTH_TOKEN:
         from_secret: drone_auth_token
@@ -26,7 +26,7 @@ steps:
         path: /tmp/cache
 
   - name: Build
-    image: node
+    image: node:12
     environment:
       IG_ACCESS_TOKEN:
         from_secret: IG_ACCESS_TOKEN
@@ -51,7 +51,7 @@ steps:
         path: /tmp/cache
 
   - name: Deploy
-    image: node
+    image: node:12
     environment:
       NETLIFY_AUTH_TOKEN:
         from_secret: NETLIFY_AUTH_TOKEN
