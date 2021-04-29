@@ -1,7 +1,7 @@
 ---
 data: 2021-04-29T15:50:22Z
 doctype: news
-title: La collezione Spring Summer 2021 è online!
+title: Scopri la nuova collezione Spring Summer 2021
 foto: "/content/images/saccona_blu.jpg"
 
 ---
