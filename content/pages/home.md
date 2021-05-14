@@ -25,7 +25,7 @@ about_us:
     Da questo sogno nascono le borse Lēdue.</p>"
   foto: "/content/images/about_us-1.jpg"
 newsletter: Join the list! Iscriviti per rimanere sempre aggiornata sulle novità e
-  ricevere uno sconto del 10% sul tuo primo acquisto
+  ricevere uno sconto del 10% sul tuo primo acquisto.
 thankyou: Thank you ♥
 
 ---
